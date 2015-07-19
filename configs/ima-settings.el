@@ -50,6 +50,12 @@
 (require 'smex)
 (smex-initialize)
 
+;; Trailing whitespace
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Set guru mode
+(guru-global-mode +1)
+
 ;; Enable company mode
 (global-company-mode t)
 (push 'company-robe company-backends)
