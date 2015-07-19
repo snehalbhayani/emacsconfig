@@ -31,8 +31,8 @@ tramp
 # cask packages
 .cask/
 
-# projectile
+# others
 projectile-bookmarks.eld
-
-# smex
 smex-items
+ac-comphist.dat
+projectile.cache

@@ -2,6 +2,7 @@
 (source melpa)
 
 (depends-on "cask")
+(depends-on "company")
 (depends-on "exec-path-from-shell")
 (depends-on "grizzl")
 (depends-on "magit")

@@ -50,6 +50,15 @@
 (require 'smex)
 (smex-initialize)
 
+;; Enable company mode
+(global-company-mode t)
+(push 'company-robe company-backends)
+;; Don't downcase completions by company mode
+(add-hook 'company-mode-hook '(lambda ()
+                                (setq company-dabbrev-downcase nil)
+                                (setq company-dabbrev-ignore-case nil)
+                                ))
+
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
 
