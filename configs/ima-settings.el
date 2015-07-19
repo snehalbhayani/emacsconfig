@@ -58,7 +58,6 @@
 
 ;; Enable company mode
 (global-company-mode t)
-(push 'company-robe company-backends)
 ;; Don't downcase completions by company mode
 (add-hook 'company-mode-hook '(lambda ()
                                 (setq company-dabbrev-downcase nil)
