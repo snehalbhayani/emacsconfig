@@ -46,6 +46,10 @@
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
 
+;; smex
+(require 'smex)
+(smex-initialize)
+
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
 

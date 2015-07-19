@@ -17,3 +17,4 @@
 (add-to-list 'load-path configs-dir)
 
 (require 'ima-settings)
+(require 'ima-keybindings)
