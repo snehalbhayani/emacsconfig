@@ -31,5 +31,21 @@
 (dolist (mode '(column-number-mode size-indication-mode))
     (when (fboundp mode) (funcall mode 1)))
 
+;; Scratch buffer configuration
+(setq initial-scratch-message nil)
+
+;; Allow pasting selection outside of Emacs
+(setq x-select-enable-clipboard t)
+
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
+;; UTF-8 please
+(setq locale-coding-system 'utf-8) ; pretty
+(set-terminal-coding-system 'utf-8) ; pretty
+(set-keyboard-coding-system 'utf-8) ; pretty
+(set-selection-coding-system 'utf-8) ; please
+(prefer-coding-system 'utf-8) ; with sugar on top
+
 (provide 'ima-settings)
 ;;; ima-settings ends here
