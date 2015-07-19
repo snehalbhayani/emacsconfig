@@ -3,9 +3,11 @@
 
 (depends-on "cask")
 (depends-on "company")
+(depends-on "company-jedi")
 (depends-on "exec-path-from-shell")
 (depends-on "grizzl")
 (depends-on "guru-mode")
+(depends-on "jedi")
 (depends-on "magit")
 (depends-on "pallet")
 (depends-on "projectile")
