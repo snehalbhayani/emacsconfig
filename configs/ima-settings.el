@@ -28,8 +28,20 @@
     (when (fboundp mode) (funcall mode -1)))
 
 ;; Some GUI
-(dolist (mode '(column-number-mode size-indication-mode))
+(dolist (mode '(column-number-mode))
     (when (fboundp mode) (funcall mode 1)))
+
+;; projectile
+(require 'projectile)
+(require 'grizzl)
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+(setq projectile-indexing-method 'alien)
+(setq projectile-use-git-grep t)
+
+;; Pallet
+(require 'pallet)
+(pallet-mode t)
 
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
