@@ -4,6 +4,8 @@
 (depends-on "cask")
 (depends-on "exec-path-from-shell")
 (depends-on "grizzl")
+(depends-on "magit")
 (depends-on "pallet")
 (depends-on "projectile")
+(depends-on "smex")
 (depends-on "zenburn-theme")

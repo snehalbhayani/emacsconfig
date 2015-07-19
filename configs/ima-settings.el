@@ -43,6 +43,9 @@
 (require 'pallet)
 (pallet-mode t)
 
+;; magit
+(setq magit-last-seen-setup-instructions "2.1.0")
+
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
 
