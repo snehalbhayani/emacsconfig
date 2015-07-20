@@ -39,8 +39,9 @@
 (require 'grizzl)
 (projectile-global-mode)
 (setq projectile-enable-caching t)
-(setq projectile-indexing-method 'alien)
+(setq projectile-indexing-method 'native)
 (setq projectile-use-git-grep t)
+(setq projectile-completion-system 'grizzl)
 
 ;; Pallet
 (require 'pallet)
