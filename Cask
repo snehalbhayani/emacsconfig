@@ -14,4 +14,5 @@
 (depends-on "pallet")
 (depends-on "projectile")
 (depends-on "smex")
+(depends-on "which-key")
 (depends-on "zenburn-theme")

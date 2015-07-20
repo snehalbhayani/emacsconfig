@@ -81,6 +81,10 @@
 ;; diff-hl
 (global-diff-hl-mode)
 
+;; which-key
+(which-key-mode)
+(which-key-setup-side-window-right)
+
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
 
