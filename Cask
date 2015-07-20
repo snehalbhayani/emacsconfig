@@ -4,6 +4,7 @@
 (depends-on "cask")
 (depends-on "company")
 (depends-on "company-jedi")
+(depends-on "diff-hl")
 (depends-on "exec-path-from-shell")
 (depends-on "flycheck")
 (depends-on "grizzl")

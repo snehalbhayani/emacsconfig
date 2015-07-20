@@ -78,6 +78,9 @@
 (with-eval-after-load 'flycheck
   (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
+;; diff-hl
+(global-diff-hl-mode)
+
 ;; Scratch buffer configuration
 (setq initial-scratch-message nil)
 
