@@ -21,6 +21,7 @@
 (global-linum-mode t)
 
 ;; Save buffer at end of session
+(setq desktop-restore-frames nil)
 (desktop-save-mode 1)
 
 ;; stop on error
@@ -49,6 +50,7 @@
 
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
+(setenv "EDITOR" "emacsclient")
 
 ;; smex
 (require 'smex)
