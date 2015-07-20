@@ -5,6 +5,7 @@
 (depends-on "company")
 (depends-on "company-jedi")
 (depends-on "exec-path-from-shell")
+(depends-on "flycheck")
 (depends-on "grizzl")
 (depends-on "guru-mode")
 (depends-on "jedi")
