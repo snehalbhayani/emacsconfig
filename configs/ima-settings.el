@@ -73,12 +73,18 @@
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
-;; UTF-8 please
-(setq locale-coding-system 'utf-8) ; pretty
-(set-terminal-coding-system 'utf-8) ; pretty
-(set-keyboard-coding-system 'utf-8) ; pretty
-(set-selection-coding-system 'utf-8) ; please
-(prefer-coding-system 'utf-8) ; with sugar on top
+;; UTF-8 encoding
+(setq locale-coding-system 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+
+;; confirm before killing
+(setq confirm-kill-emacs 'y-or-n-p)
+
+;; Replace yes-no questions with y-n questions
+(fset 'yes-or-no-p 'y-or-n-p)
 
 (provide 'ima-settings)
 ;;; ima-settings ends here
