@@ -17,8 +17,8 @@
 ;; load configs
 (add-to-list 'load-path configs-dir)
 
-(require 'ima-settings)
-(require 'ima-keybindings)
+(require 'ia-settings)
+(require 'ia-keybindings)
 
 ;; load the hooks
 (mapcar 'load (directory-files hooks-dir t "\\.el\\'"))

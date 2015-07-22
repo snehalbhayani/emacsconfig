@@ -94,5 +94,5 @@
 ;; Replace yes-no questions with y-n questions
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(provide 'ima-settings)
-;;; ima-settings ends here
+(provide 'ia-settings)
+;;; ia-settings ends here
