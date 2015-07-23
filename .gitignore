@@ -36,3 +36,4 @@ projectile-bookmarks.eld
 smex-items
 ac-comphist.dat
 projectile.cache
+.python-environments/*
