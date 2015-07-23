@@ -9,3 +9,5 @@ $ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 
 Install Jedi EPC Server
 M-x jedi:install-server
+
+Update git to 1.9.4 or above
