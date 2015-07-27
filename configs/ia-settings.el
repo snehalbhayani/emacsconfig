@@ -25,7 +25,7 @@
 (desktop-save-mode 1)
 
 ;; stop on error
-(setq debug-on-error t)
+;; (setq debug-on-error t)
 
 ;; No GUI
 (dolist (mode '(tool-bar-mode tooltip-mode scroll-bar-mode))
