@@ -28,7 +28,7 @@
 ;; (setq debug-on-error t)
 
 ;; No GUI
-(dolist (mode '(tool-bar-mode tooltip-mode scroll-bar-mode))
+(dolist (mode '(menu-bar-mode tool-bar-mode tooltip-mode scroll-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
 
 ;; Some GUI
@@ -39,8 +39,8 @@
 (require 'projectile)
 (require 'grizzl)
 (projectile-global-mode)
-(setq projectile-enable-caching t)
-(setq projectile-indexing-method 'native)
+;; (setq projectile-enable-caching nil)
+(setq projectile-indexing-method 'alien)
 (setq projectile-use-git-grep t)
 (setq projectile-completion-system 'grizzl)
 
@@ -80,6 +80,9 @@
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
+(setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
 
 ;; UTF-8 encoding
 (setq locale-coding-system 'utf-8)
