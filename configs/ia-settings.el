@@ -1,5 +1,7 @@
 ;; Theme
+(setq spacemacs-theme-comment-bg nil)
 (load-theme 'spacemacs-dark t)
+
 (powerline-default-theme)
 
 ;; Font

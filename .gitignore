@@ -31,6 +31,9 @@ tramp
 # cask packages
 .cask/
 
+# ido
+ido.last
+
 # others
 projectile-bookmarks.eld
 smex-items
