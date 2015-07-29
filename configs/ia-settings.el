@@ -96,6 +96,10 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
+;; Autopair
+(require 'autopair)
+(autopair-global-mode) ;; enable autopair in all buffers
+
 ;; confirm before killing
 (setq confirm-kill-emacs 'y-or-n-p)
 

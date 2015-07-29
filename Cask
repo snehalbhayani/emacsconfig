@@ -1,6 +1,7 @@
 (source gnu)
 (source melpa)
 
+(depends-on "autopair")
 (depends-on "cask")
 (depends-on "company")
 (depends-on "company-jedi")
