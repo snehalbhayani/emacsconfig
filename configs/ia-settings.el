@@ -6,7 +6,7 @@
 ;;; Code:
 
 ;; Theme
-(load-theme 'zenburn t)
+(load-theme 'spacemacs-dark t)
 (powerline-default-theme)
 
 ;; Font

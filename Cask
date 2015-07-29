@@ -15,6 +15,7 @@
 (depends-on "powerline")
 (depends-on "projectile")
 (depends-on "smex")
+(depends-on "spacemacs-theme")
 (depends-on "web-mode")
 (depends-on "which-key")
 (depends-on "zenburn-theme")
