@@ -1,10 +1,3 @@
-;;; package --- summary
-
-;;; Commentary:
-;; General Settings
-
-;;; Code:
-
 ;; Theme
 (load-theme 'spacemacs-dark t)
 (powerline-default-theme)
@@ -107,4 +100,3 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (provide 'ia-settings)
-;;; ia-settings ends here
