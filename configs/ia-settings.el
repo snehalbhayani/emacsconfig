@@ -24,7 +24,7 @@
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
 
-;; stop on error
+;; Stop on error
 ;; (setq debug-on-error t)
 
 ;; No GUI
@@ -48,9 +48,13 @@
 (require 'pallet)
 (pallet-mode t)
 
+;; IDO
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
-(setenv "EDITOR" "emacsclient")
 
 ;; smex
 (require 'smex)
