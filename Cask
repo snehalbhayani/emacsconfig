@@ -1,7 +1,6 @@
 (source gnu)
 (source melpa)
 
-(depends-on "autopair")
 (depends-on "cask")
 (depends-on "company")
 (depends-on "company-jedi")
@@ -15,6 +14,7 @@
 (depends-on "pallet")
 (depends-on "powerline")
 (depends-on "projectile")
+(depends-on "smartparens")
 (depends-on "smex")
 (depends-on "spacemacs-theme")
 (depends-on "web-mode")
