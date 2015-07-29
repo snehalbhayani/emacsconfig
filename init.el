@@ -17,6 +17,7 @@
 ;; load configs
 (add-to-list 'load-path configs-dir)
 
+(require 'ia-core)
 (require 'ia-settings)
 (require 'ia-keybindings)
 
