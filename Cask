@@ -12,6 +12,7 @@
 (depends-on "jedi")
 (depends-on "magit")
 (depends-on "pallet")
+(depends-on "powerline")
 (depends-on "projectile")
 (depends-on "smex")
 (depends-on "web-mode")

@@ -7,6 +7,7 @@
 
 ;; Theme
 (load-theme 'zenburn t)
+(powerline-default-theme)
 
 ;; Font
 (set-frame-font "Source Code Pro 13")
