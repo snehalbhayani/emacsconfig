@@ -1,7 +1,9 @@
 ;; Theme
 (setq spacemacs-theme-comment-bg nil)
 (load-theme 'spacemacs-dark t)
+;; (load-theme 'zenburn t)
 
+;; Mode line theme
 (powerline-default-theme)
 
 ;; Font
