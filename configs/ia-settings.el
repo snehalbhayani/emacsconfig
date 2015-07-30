@@ -71,6 +71,9 @@
 ;; Set guru mode
 (guru-global-mode +1)
 
+;; Set smartparens mode
+(smartparens-global-mode 1)
+
 ;; Enable company mode
 (global-company-mode t)
 
