@@ -4,7 +4,7 @@
 (setq jedi:tooltip-method nil)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 
-(defun my/python-mode-hook ()
+(defun rekenerd-python-mode-hook ()
     (add-to-list 'company-backends 'company-jedi))
 
-(add-hook 'python-mode-hook 'my/python-mode-hook)
+(add-hook 'python-mode-hook 'rekenerd-python-mode-hook)

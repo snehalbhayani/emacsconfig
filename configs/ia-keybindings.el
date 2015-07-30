@@ -16,6 +16,4 @@
 ;; replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key (kbd "C-a") 'imran-beginning-of-line-or-indent)
-
 (provide 'ia-keybindings)

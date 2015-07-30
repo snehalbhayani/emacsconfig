@@ -16,6 +16,9 @@
 ;; Show line number
 (global-linum-mode t)
 
+;; Highlight current line
+(global-hl-line-mode +1)
+
 ;; Save buffer at end of session
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
