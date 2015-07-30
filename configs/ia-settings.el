@@ -57,6 +57,7 @@
 
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
+(setq magit-status-buffer-switch-function 'switch-to-buffer)
 
 ;; smex
 (require 'smex)
@@ -79,6 +80,7 @@
 (which-key-setup-side-window-right)
 
 ;; Scratch buffer configuration
+(kill-buffer "*scratch*")
 (setq initial-scratch-message nil)
 
 ;; Allow pasting selection outside of Emacs
