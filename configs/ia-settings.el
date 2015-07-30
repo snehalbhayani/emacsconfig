@@ -19,6 +19,9 @@
 ;; Highlight current line
 (global-hl-line-mode +1)
 
+;; No tabs for indentation
+(setq-default indent-tabs-mode nil)
+
 ;; Save buffer at end of session
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
