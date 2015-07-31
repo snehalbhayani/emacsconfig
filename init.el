@@ -11,15 +11,15 @@
 
 ;; set path
 (setq root-dir "~/.emacs.d")
-(setq configs-dir (concat root-dir "/configs"))
+(setq core-dir (concat root-dir "/core"))
 (setq hooks-dir (concat root-dir "/hooks"))
 
-;; load configs
-(add-to-list 'load-path configs-dir)
+;; load core files
+(add-to-list 'load-path core-dir)
 
-(require 'ia-core)
-(require 'ia-settings)
-(require 'ia-keybindings)
+(require 'rk-ui)
+(require 'rk-editor)
+(require 'rk-global-keybindings)
 
 ;; load the hooks
 (mapcar 'load (directory-files hooks-dir t "\\.el\\'"))

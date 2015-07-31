@@ -1,25 +1,5 @@
-;; Theme
-(setq spacemacs-theme-comment-bg nil)
-(load-theme 'spacemacs-dark t)
-;; (load-theme 'zenburn t)
-
-;; Mode line theme
-(powerline-default-theme)
-
-;; Font
-(set-frame-font "Source Code Pro 13")
-
-;; Start in maximized mode
-(toggle-frame-maximized)
-
 ;; Allows syntax highlighting to work
 (global-font-lock-mode 1)
-
-;; Show line number
-(global-linum-mode t)
-
-;; Highlight current line
-(global-hl-line-mode +1)
 
 ;; No tabs for indentation
 (setq-default indent-tabs-mode nil)
@@ -27,17 +7,6 @@
 ;; Save buffer at end of session
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
-
-;; Stop on error
-;; (setq debug-on-error t)
-
-;; No GUI
-(dolist (mode '(menu-bar-mode tool-bar-mode tooltip-mode scroll-bar-mode))
-    (when (fboundp mode) (funcall mode -1)))
-
-;; Some GUI
-(dolist (mode '(column-number-mode))
-    (when (fboundp mode) (funcall mode 1)))
 
 ;; projectile
 (require 'projectile)
@@ -48,7 +17,7 @@
 (setq projectile-use-git-grep t)
 (setq projectile-completion-system 'grizzl)
 
-;; Pallet
+;; pallet
 (require 'pallet)
 (pallet-mode t)
 
@@ -104,10 +73,28 @@
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; confirm before killing
-(setq confirm-kill-emacs 'y-or-n-p)
+(defun rekenerd-move-beginning-of-line (arg)
+  "Move point back to indentation of beginning of line.
+Move point to the first non-whitespace character on this line.
+If point is already there, move to the beginning of the line.
+Effectively toggle between the first non-whitespace character and
+the beginning of the line.
+If ARG is not nil or 1, move forward ARG - 1 lines first.  If
+point reaches the beginning or end of the buffer, stop there.
+source: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/"
+  (interactive "^p")
+  (setq arg (or arg 1))
 
-;; Replace yes-no questions with y-n questions
-(fset 'yes-or-no-p 'y-or-n-p)
+  ;; Move lines first
+  (when (/= arg 1)
+    (let ((line-move-visual nil))
+      (forward-line (1- arg))))
 
-(provide 'ia-settings)
+  (let ((orig-point (point)))
+    (back-to-indentation)
+    (when (= orig-point (point))
+      (move-beginning-of-line 1))))
+
+(global-set-key [remap move-beginning-of-line] 'rekenerd-move-beginning-of-line)
+
+(provide 'rk-editor)
