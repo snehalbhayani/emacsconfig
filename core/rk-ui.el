@@ -9,6 +9,15 @@
 ;; Font
 (set-frame-font "Source Code Pro 13")
 
+;; Disable startup screen
+(setq inhibit-startup-screen t)
+
+;; nice scrolling
+(setq scroll-margin 0
+      scroll-conservatively 100000
+      scroll-preserve-screen-position 1)
+
+
 ;; Start in maximized mode
 (toggle-frame-maximized)
 
@@ -22,14 +31,15 @@
 (dolist (mode '(menu-bar-mode
                 tool-bar-mode
                 tooltip-mode
-                scroll-bar-mode))
+                scroll-bar-mode
+                blink-cursor-mode))
     (when (fboundp mode) (funcall mode -1)))
 
 ;; Some GUI
 (dolist (mode '(column-number-mode))
     (when (fboundp mode) (funcall mode 1)))
 
-;; confirm before killing
+;; Confirm before killing
 (setq confirm-kill-emacs 'y-or-n-p)
 
 ;; Replace yes-no questions with y-n questions

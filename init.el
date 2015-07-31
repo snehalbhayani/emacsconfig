@@ -3,8 +3,6 @@
 (cask-initialize)
 (package-initialize)
 
-(setq inhibit-splash-screen t)
-
 ;; Fix load path
 (when (memq window-system '(mac ns))
     (exec-path-from-shell-initialize))
