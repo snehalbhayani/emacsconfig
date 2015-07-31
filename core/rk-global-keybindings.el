@@ -16,7 +16,4 @@
 ;; Replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-;; Swap buffer
-(global-set-key (kbd "C-c b") 'swap-buffers)
-
 (provide 'rk-global-keybindings)

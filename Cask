@@ -17,7 +17,6 @@
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "spacemacs-theme")
-(depends-on "swap-buffers")
 (depends-on "web-mode")
 (depends-on "which-key")
 (depends-on "zenburn-theme")
