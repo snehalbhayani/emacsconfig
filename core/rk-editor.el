@@ -28,7 +28,34 @@
 
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
-(setq magit-status-buffer-switch-function 'switch-to-buffer)
+;; (setq magit-status-buffer-switch-function 'switch-to-buffer)
+(setq magit-completing-read-function 'magit-ido-completing-read)
+(setq magit-revert-backup t)
+(setenv "EDITOR" "emacsclient")
+
+;; Do not verify if pushing current branch to its upstream branch
+(setq magit-push-always-verify 'PP)
+
+;; Do not check for commit conventions in magit commit buffer
+(eval-after-load 'magit
+  (remove-hook 'git-commit-finish-query-functions
+               #'git-commit-check-style-conventions))
+
+;; start magit in fullscreen, on exit (from magit) restore window configuration
+(eval-after-load "magit"
+  '(defadvice magit-status (around magit-fullscreen activate)
+     (window-configuration-to-register :magit-fullscreen)
+     ad-do-it
+     (delete-other-windows)))
+
+(defun magit-quit-session ()
+  "Restores the previous window configuration and kills the magit buffer"
+  (interactive)
+  (kill-buffer)
+  (jump-to-register :magit-fullscreen))
+
+(eval-after-load "magit"
+  '(progn (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
 
 ;; smex
 (require 'smex)
