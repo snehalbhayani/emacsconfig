@@ -68,7 +68,12 @@
 (guru-global-mode +1)
 
 ;; Set smartparens mode
+(setq sp-base-key-bindings 'paredit)
+(setq sp-autoskip-closing-pair 'always)
+(setq sp-hybrid-kill-entire-symbol nil)
+(sp-use-paredit-bindings)
 (smartparens-global-mode 1)
+(show-smartparens-global-mode +1)
 
 ;; Enable company mode
 (global-company-mode t)
