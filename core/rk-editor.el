@@ -24,6 +24,7 @@
 ;; IDO
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
+(setq read-buffer-function #'ido-read-buffer)
 (ido-mode 1)
 
 ;; magit
