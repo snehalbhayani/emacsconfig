@@ -9,6 +9,7 @@
 (depends-on "flycheck")
 (depends-on "grizzl")
 (depends-on "guru-mode")
+(depends-on "ido-completing-read+")
 (depends-on "jedi")
 (depends-on "magit")
 (depends-on "magit-gitflow")
