@@ -33,6 +33,10 @@
 (setq magit-revert-backup t)
 (setenv "EDITOR" "emacsclient")
 
+;; Enable magit-gitflow
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+
 ;; Do not verify if pushing current branch to its upstream branch
 (setq magit-push-always-verify 'PP)
 
