@@ -3,4 +3,5 @@
                                 (setq company-dabbrev-downcase nil)
                                 (setq company-dabbrev-ignore-case nil)
                                 ))
+
 (add-hook 'after-init-hook 'global-company-mode)
