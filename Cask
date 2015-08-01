@@ -12,7 +12,6 @@
 (depends-on "jedi")
 (depends-on "magit")
 (depends-on "magit-gitflow")
-(depends-on "pallet")
 (depends-on "powerline")
 (depends-on "projectile")
 (depends-on "smartparens")

@@ -9,17 +9,11 @@
 (desktop-save-mode 1)
 
 ;; projectile
-(require 'projectile)
-(require 'grizzl)
 (projectile-global-mode)
 ;; (setq projectile-enable-caching nil)
 (setq projectile-indexing-method 'alien)
 (setq projectile-use-git-grep t)
 (setq projectile-completion-system 'grizzl)
-
-;; pallet
-(require 'pallet)
-(pallet-mode t)
 
 ;; IDO
 (setq ido-enable-flex-matching t)
