@@ -27,11 +27,19 @@
                 tooltip-mode
                 scroll-bar-mode
                 blink-cursor-mode))
-    (when (fboundp mode) (funcall mode -1)))
+  (when (fboundp mode) (funcall mode -1)))
 
 ;; Some GUI
 (dolist (mode '(column-number-mode))
-    (when (fboundp mode) (funcall mode 1)))
+  (when (fboundp mode) (funcall mode 1)))
+
+;; Setup browse kill ring
+;; (require 'browse-kill-ring)
+(setq browse-kill-ring-display-duplicates nil)
+(setq browse-kill-ring-highlight-inserted-item nil)
+(setq browse-kill-ring-maximum-display-length 100)
+(setq browse-kill-ring-no-duplicates t)
+(setq browse-kill-ring-recenter t)
 
 ;; Confirm before killing
 (setq confirm-kill-emacs 'y-or-n-p)
