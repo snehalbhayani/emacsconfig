@@ -13,6 +13,7 @@
 (depends-on "jedi")
 (depends-on "magit")
 (depends-on "magit-gitflow")
+(depends-on "multiple-cursors")
 (depends-on "powerline")
 (depends-on "projectile")
 (depends-on "smartparens")

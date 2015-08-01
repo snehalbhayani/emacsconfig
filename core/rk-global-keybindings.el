@@ -16,4 +16,6 @@
 ;; Replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
 (provide 'rk-global-keybindings)
