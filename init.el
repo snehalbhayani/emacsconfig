@@ -26,5 +26,3 @@
 
 ;; Load the hooks
 (mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
-
-;;; init.el ends here

@@ -18,7 +18,7 @@
 ;; Add a custom function for underlining errors
 (require 'flycheck)
 (defun rekenerd-add-lines-for-errors (err)
-  "Credits: https://github.com/iqbalansari"
+  "Credit: https://github.com/iqbalansari"
   (flycheck-error-with-buffer err
     (when (equal (flycheck-error-level err) 'error)
       (pcase-let* ((`(,beg . ,end) (flycheck-error-region-for-mode

@@ -123,7 +123,7 @@ Effectively toggle between the first non-whitespace character and
 the beginning of the line.
 If ARG is not nil or 1, move forward ARG - 1 lines first.  If
 point reaches the beginning or end of the buffer, stop there.
-source: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/"
+credit: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/"
   (interactive "^p")
   (setq arg (or arg 1))
 
