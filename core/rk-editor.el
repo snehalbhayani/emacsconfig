@@ -81,7 +81,7 @@
 
 ;; which-key
 (which-key-mode)
-(which-key-setup-side-window-right)
+(which-key-setup-side-window-bottom)
 
 ;; Scratch buffer configuration
 (kill-buffer "*scratch*")
