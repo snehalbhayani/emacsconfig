@@ -9,17 +9,11 @@
 (desktop-save-mode 1)
 
 ;; projectile
-(require 'projectile)
-(require 'grizzl)
 (projectile-global-mode)
 ;; (setq projectile-enable-caching nil)
 (setq projectile-indexing-method 'alien)
 (setq projectile-use-git-grep t)
 (setq projectile-completion-system 'grizzl)
-
-;; pallet
-(require 'pallet)
-(pallet-mode t)
 
 ;; IDO
 (setq ido-enable-flex-matching t)
@@ -33,6 +27,10 @@
 (setq magit-completing-read-function 'magit-ido-completing-read)
 (setq magit-revert-backup t)
 (setenv "EDITOR" "emacsclient")
+
+;; Enable magit-gitflow
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 
 ;; Do not verify if pushing current branch to its upstream branch
 (setq magit-push-always-verify 'PP)
@@ -84,7 +82,7 @@
 
 ;; which-key
 (which-key-mode)
-(which-key-setup-side-window-right)
+(which-key-setup-side-window-bottom)
 
 ;; Scratch buffer configuration
 (kill-buffer "*scratch*")
