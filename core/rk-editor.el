@@ -1,8 +1,12 @@
 ;; Allows syntax highlighting to work
 (global-font-lock-mode 1)
 
-;; No tabs for indentation
+;; Indentation
+(setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; Replace selected region with typed text
+(delete-selection-mode)
 
 ;; Save buffer at end of session
 (setq desktop-restore-frames nil)
@@ -103,6 +107,13 @@
 (set-keyboard-coding-system 'utf-8)
 (set-selection-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+
+;; Setup browse kill ring
+(setq browse-kill-ring-display-duplicates nil)
+(setq browse-kill-ring-highlight-inserted-item nil)
+(setq browse-kill-ring-maximum-display-length 100)
+(setq browse-kill-ring-no-duplicates t)
+(setq browse-kill-ring-recenter t)
 
 (defun rekenerd-move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.

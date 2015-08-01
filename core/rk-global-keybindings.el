@@ -16,6 +16,14 @@
 ;; Replace buffer-menu with ibuffer
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+;; Mutliple cursors
+(global-set-key (kbd "C-S-m") 'mc/mark-more-like-this-extended)
+(global-set-key (kbd "C-S-l") 'mc/edit-lines)
+(global-set-key (kbd "C-S-c") 'mc/mark-all-like-this-dwim)
+(global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
+(global-set-key (kbd "C-S-r") 'set-rectangular-region-anchor)
+(global-set-key (kbd "C-S-a") 'mc/mark-all-in-region)
+
+(global-set-key (kbd "C-c M-y") 'browse-kill-ring)
 
 (provide 'rk-global-keybindings)

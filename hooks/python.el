@@ -7,7 +7,6 @@
 (setq python-indent 4)
 
 (defun rekenerd-python-mode-hook ()
-  (add-to-list 'company-backends 'company-jedi)
-  (setq tab-width 4))
+  (add-to-list 'company-backends 'company-jedi))
 
 (add-hook 'python-mode-hook 'rekenerd-python-mode-hook)
