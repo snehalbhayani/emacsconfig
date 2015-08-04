@@ -15,6 +15,12 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
+;; Reduce the frequency of garbage collection
+(setq gc-cons-threshold 50000000)
+
+;; Warn when opening files bigger than 100MB
+(setq large-file-warning-threshold 100000000)
+
 ;; Set path
 (defvar root-dir (file-name-directory load-file-name))
 (defvar core-dir (expand-file-name "core" root-dir))

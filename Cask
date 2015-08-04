@@ -8,6 +8,7 @@
 (depends-on "diff-hl")
 (depends-on "exec-path-from-shell")
 (depends-on "flycheck")
+(depends-on "flx-ido")
 (depends-on "gitignore-mode")
 (depends-on "grizzl")
 (depends-on "guru-mode")

@@ -20,10 +20,12 @@
 (setq projectile-completion-system 'grizzl)
 
 ;; IDO
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(setq read-buffer-function #'ido-read-buffer)
 (ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+(setq ido-enable-flex-matching t)
+(setq read-buffer-function #'ido-read-buffer)
+(setq flx-ido-threshold 1000)
 
 ;; magit
 (setq magit-last-seen-setup-instructions "2.1.0")
