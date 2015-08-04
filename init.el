@@ -1,9 +1,12 @@
+(when (version< emacs-version "24.1")
+  (error "Requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
+
 ;; Initialize cask
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
-(when (version< emacs-version "24.1")
-  (error "Requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
+;; Activate installed packages
+(package-initialize)
 
 ;; Always load newest byte code
 (setq load-prefer-newer t)
