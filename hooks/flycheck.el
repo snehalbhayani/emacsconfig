@@ -38,3 +38,7 @@
 
 (eval-after-load 'flycheck
   '(add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
+
+;; Enable flycheck-cask
+(eval-after-load 'flycheck
+  '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
