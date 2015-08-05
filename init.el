@@ -34,4 +34,4 @@
 (require 'rk-global-keybindings)
 
 ;; Load the hooks
-(mapcar 'load (directory-files hooks-dir t "\\.el\\'"))
+(mapc 'load (directory-files hooks-dir t ".*\.el"))
