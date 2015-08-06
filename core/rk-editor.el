@@ -13,6 +13,7 @@
 (desktop-save-mode 1)
 
 ;; projectile
+(require 'projectile)
 (projectile-global-mode)
 ;; (setq projectile-enable-caching nil)
 (setq projectile-indexing-method 'alien)
@@ -20,14 +21,19 @@
 (setq projectile-completion-system 'grizzl)
 
 ;; IDO
+(require 'ido)
 (ido-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
 (setq ido-enable-flex-matching t)
 (setq read-buffer-function #'ido-read-buffer)
+
+;; flx-ido
+(require 'flx-ido)
 (setq flx-ido-threshold 1000)
 
 ;; magit
+(require 'magit)
 (setq magit-last-seen-setup-instructions "2.1.0")
 ;; (setq magit-status-buffer-switch-function 'switch-to-buffer)
 (setq magit-completing-read-function 'magit-ido-completing-read)
@@ -73,6 +79,7 @@
 (guru-global-mode +1)
 
 ;; Set smartparens mode
+(require 'smartparens)
 (setq sp-base-key-bindings 'paredit)
 (setq sp-autoskip-closing-pair 'always)
 (setq sp-hybrid-kill-entire-symbol nil)
@@ -87,9 +94,10 @@
 (global-diff-hl-mode)
 
 ;; which-key
+(require 'which-key)
 (which-key-mode +1)
 (which-key-setup-side-window-bottom)
-;; (setq which-key-idle-delay 0.3)
+;; (setq which-key-idle-delay 0.5)
 (setq which-key-side-window-max-height 0.5)
 
 ;; Scratch buffer configuration
@@ -113,6 +121,7 @@
 (prefer-coding-system 'utf-8)
 
 ;; Setup browse kill ring
+(require 'browse-kill-ring)
 (setq browse-kill-ring-display-duplicates nil)
 (setq browse-kill-ring-highlight-inserted-item nil)
 (setq browse-kill-ring-maximum-display-length 100)
