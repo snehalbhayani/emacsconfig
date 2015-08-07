@@ -16,6 +16,7 @@
 (depends-on "guru-mode")
 (depends-on "ido-completing-read+")
 (depends-on "jedi")
+(depends-on "json-mode")
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "multiple-cursors")
