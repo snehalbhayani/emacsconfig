@@ -27,4 +27,5 @@
 (depends-on "spacemacs-theme")
 (depends-on "web-mode")
 (depends-on "which-key")
+(depends-on "yaml-mode")
 (depends-on "zenburn-theme")
