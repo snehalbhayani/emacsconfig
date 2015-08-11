@@ -21,6 +21,12 @@
 ;; Highlight current line
 (global-hl-line-mode +1)
 
+;; Highlight matching parentheses
+(show-paren-mode t)
+
+;; Hide right fringe
+;; (fringe-mode (quote (nil . 0)))
+
 ;; No GUI
 (dolist (mode '(menu-bar-mode
                 tool-bar-mode
