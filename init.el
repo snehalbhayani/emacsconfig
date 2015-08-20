@@ -31,7 +31,7 @@
 
 (require 'rk-ui)
 (require 'rk-editor)
-(require 'rk-global-keybindings)
+(require 'rk-keybindings)
 
 ;; Load the hooks
 (mapc 'load (directory-files hooks-dir t ".*\.el"))

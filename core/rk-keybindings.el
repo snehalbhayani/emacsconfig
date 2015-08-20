@@ -26,4 +26,6 @@
 
 (global-set-key (kbd "C-c M-y") 'browse-kill-ring)
 
-(provide 'rk-global-keybindings)
+(global-set-key (kbd "RET") 'newline-and-indent)
+
+(provide 'rk-keybindings)
