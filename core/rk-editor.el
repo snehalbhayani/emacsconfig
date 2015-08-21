@@ -43,6 +43,9 @@
 ;; Enable magit-gitflow
 (require 'magit-gitflow)
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+(with-eval-after-load 'magit-gitflow
+    (define-key magit-gitflow-mode-map (kbd "C-f") nil)
+    (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
 ;; Do not verify if pushing current branch to its upstream branch
 (setq magit-push-always-verify 'PP)
