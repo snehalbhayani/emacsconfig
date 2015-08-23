@@ -8,6 +8,10 @@
 ;; Activate installed packages
 (package-initialize)
 
+;; Enable async byte compilation for all packages
+(setq async-bytecomp-allowed-packages '(all))
+(async-bytecomp-package-mode)
+
 ;; Always load newest byte code
 (setq load-prefer-newer t)
 
@@ -15,8 +19,8 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-;; Reduce the frequency of garbage collection
-(setq gc-cons-threshold 50000000)
+;; Increase the frequency of garbage collection
+(setq gc-cons-threshold (* 100 1024 1024))
 
 ;; Warn when opening files bigger than 100MB
 (setq large-file-warning-threshold 100000000)

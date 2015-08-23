@@ -1,6 +1,6 @@
 ;; Theme
 (setq spacemacs-theme-comment-bg nil)
-(load-theme 'spacemacs-dark t)
+(load-theme 'spacemacs-light t)
 ;; (load-theme 'zenburn t)
 
 ;; Mode line theme

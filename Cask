@@ -2,6 +2,7 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "async")
 (depends-on "browse-kill-ring")
 (depends-on "cask")
 (depends-on "company")
