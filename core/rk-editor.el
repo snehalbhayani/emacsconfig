@@ -45,15 +45,14 @@
 
 ;; Do not check for commit conventions in magit commit buffer
 (eval-after-load 'magit
-  (remove-hook 'git-commit-finish-query-functions
-               #'git-commit-check-style-conventions))
+  (remove-hook 'git-commit-finish-query-functions #'git-commit-check-style-conventions))
 
 ;; Start magit in fullscreen, on exit (from magit) restore window configuration
-(eval-after-load "magit"
-  '(defadvice magit-status (around magit-fullscreen activate)
-     (window-configuration-to-register :magit-fullscreen)
-     ad-do-it
-     (delete-other-windows)))
+(with-eval-after-load 'magit
+  (defadvice magit-status (around magit-fullscreen activate)
+    (window-configuration-to-register :magit-fullscreen)
+    ad-do-it
+    (delete-other-windows)))
 
 (defun magit-quit-session ()
   "Restores the previous window configuration and kills the magit buffer"
@@ -61,15 +60,15 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
-(eval-after-load "magit"
-  '(progn (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
+(with-eval-after-load 'magit
+  (define-key magit-status-mode-map (kbd "q") 'magit-quit-session))
 
 ;; Enable magit-gitflow
 (require 'magit-gitflow)
 (add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
 (with-eval-after-load 'magit-gitflow
-    (define-key magit-gitflow-mode-map (kbd "C-f") nil)
-    (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
+  (define-key magit-gitflow-mode-map (kbd "C-f") nil)
+  (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
 ;; smex
 (require 'smex)
