@@ -5,7 +5,7 @@
 
 ;; Disable syntax checking on newline
 (with-eval-after-load 'flycheck
-  '(setq flycheck-check-syntax-automatically (delq 'new-line flycheck-check-syntax-automatically)))
+  (setq flycheck-check-syntax-automatically (delq 'new-line flycheck-check-syntax-automatically)))
 
 ;; Disable checkdoc warning
 (with-eval-after-load 'flycheck
@@ -17,6 +17,7 @@
 
 ;; Add a custom function for underlining errors
 (require 'flycheck)
+
 (defun rekenerd-add-lines-for-errors (err)
   "Credit: https://github.com/iqbalansari"
   (flycheck-error-with-buffer err
@@ -37,7 +38,7 @@
         overlay))))
 
 (with-eval-after-load 'flycheck
-  '(add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
+  (add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
 
 ;; Enable flycheck-cask
 (with-eval-after-load 'flycheck
