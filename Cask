@@ -25,6 +25,7 @@
 (depends-on "gitignore-mode")
 (depends-on "grizzl")
 (depends-on "guru-mode")
+(depends-on "ibuffer-projectile")
 (depends-on "ido-completing-read+")
 (depends-on "jedi")
 (depends-on "jedi-core")

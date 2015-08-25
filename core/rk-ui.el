@@ -1,4 +1,4 @@
-;; Theme
+;;; Theme
 ;; (setq spacemacs-theme-comment-bg nil)
 ;; (load-theme 'spacemacs-light t)
 (load-theme 'monokai t)

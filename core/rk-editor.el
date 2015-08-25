@@ -157,4 +157,15 @@ credit: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginnin
 (require 'windmove)
 (windmove-default-keybindings)
 
+;; Use ibuffer-projectile to group buffers by projects
+(defun ibuffer-projectile-setup ()
+  (ibuffer-projectile-set-filter-groups)
+  (unless (eq ibuffer-sorting-mode 'alphabetic)
+    (ibuffer-do-sort-by-alphabetic)))
+
+(add-hook 'ibuffer-hook #'ibuffer-projectile-setup)
+
+;; Do not show empty groups in ibuffer
+(setq ibuffer-show-empty-filter-groups nil)
+
 (provide 'rk-editor)
