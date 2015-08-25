@@ -34,14 +34,14 @@
 
 ;;; magit
 (require 'magit)
-(setq magit-last-seen-setup-instructions "2.1.0")
-;; (setq magit-status-buffer-switch-function 'switch-to-buffer)
-(setq magit-completing-read-function 'magit-ido-completing-read)
-(setq magit-revert-backup t)
-(setenv "EDITOR" "emacsclient")
-
-;; Do not verify if pushing current branch to its upstream branch
-(setq magit-push-always-verify 'PP)
+(setq magit-restore-window-configuration t
+      magit-revert-buffers 'silent
+      magit-push-always-verify nil
+      magit-delete-by-moving-to-trash nil
+      magit-diff-auto-show-delay 0.1
+      magit-log-section-arguments nil
+      magit-log-show-margin nil
+      magit-completing-read-function 'magit-ido-completing-read)
 
 ;; Do not check for commit conventions in magit commit buffer
 (eval-after-load 'magit
