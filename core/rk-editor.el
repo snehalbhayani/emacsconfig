@@ -90,9 +90,6 @@
 (smartparens-global-mode 1)
 (show-smartparens-global-mode +1)
 
-;; Enable company mode
-(global-company-mode t)
-
 ;; diff-hl
 (global-diff-hl-mode)
 

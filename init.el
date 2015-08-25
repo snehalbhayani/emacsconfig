@@ -1,5 +1,6 @@
-(when (version< emacs-version "24.1")
-  (error "Requires at least GNU Emacs 24.1, but you're running %s" emacs-version))
+;; Ensure we are using atleast GNU Emacs 24.4
+(when (version< emacs-version "24.4")
+  (error "Requires at least GNU Emacs 24.4, but you're running %s. Please upgrade and try again!" emacs-version))
 
 ;; Initialize cask
 (require 'cask "~/.cask/cask.el")
