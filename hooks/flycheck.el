@@ -40,6 +40,19 @@
 (with-eval-after-load 'flycheck
   (add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
 
+;; Change flycheck face to use straight lines instead of wavy lines
+(defun rekenerd-flycheck-use-straight-lines ()
+  "Credit: https://github.com/iqbalansari"
+  (when (display-graphic-p)
+    (let ((error-color (plist-get (face-attribute 'flycheck-error :underline) :color))
+          (warning-color (plist-get (face-attribute 'flycheck-warning :underline) :color))
+          (info-color (plist-get (face-attribute 'flycheck-info :underline) :color)))
+      (set-face-attribute 'flycheck-error nil :underline (list :style 'line :color error-color))
+      (set-face-attribute 'flycheck-warning nil :underline (list :style 'line :color warning-color))
+      (set-face-attribute 'flycheck-info nil :underline (list :style 'line :color info-color)))))
+
+(add-hook 'flycheck-mode-hook #'rekenerd-flycheck-use-straight-lines)
+
 ;; Enable flycheck-cask
 (with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))
