@@ -35,6 +35,7 @@
 
 (require 'rk-ui)
 (require 'rk-editor)
+(require 'rk-windows)
 (require 'rk-keybindings)
 
 ;; Load the hooks
