@@ -4,7 +4,7 @@
 (setq flycheck-idle-change-delay 1)
 
 ;; Disable syntax checking on newline
-(eval-after-load 'flycheck
+(with-eval-after-load 'flycheck
   '(setq flycheck-check-syntax-automatically (delq 'new-line flycheck-check-syntax-automatically)))
 
 ;; Disable checkdoc warning
@@ -36,9 +36,9 @@
         (overlay-put overlay 'help-echo (flycheck-error-message err))
         overlay))))
 
-(eval-after-load 'flycheck
+(with-eval-after-load 'flycheck
   '(add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
 
 ;; Enable flycheck-cask
-(eval-after-load 'flycheck
+(with-eval-after-load 'flycheck
   '(add-hook 'flycheck-mode-hook #'flycheck-cask-setup))

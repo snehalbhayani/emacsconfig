@@ -44,7 +44,7 @@
       magit-completing-read-function 'magit-ido-completing-read)
 
 ;; Do not check for commit conventions in magit commit buffer
-(eval-after-load 'magit
+(with-eval-after-load 'magit
   (remove-hook 'git-commit-finish-query-functions #'git-commit-check-style-conventions))
 
 ;; Start magit in fullscreen, on exit (from magit) restore window configuration
