@@ -21,6 +21,7 @@
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "multiple-cursors")
+(depends-on "pallet")
 (depends-on "pdf-tools")
 (depends-on "powerline")
 (depends-on "projectile")

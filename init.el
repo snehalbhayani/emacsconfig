@@ -5,6 +5,10 @@
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
 
+;; Initialize pallet
+(require 'pallet)
+(pallet-mode t)
+
 ;; Activate installed packages
 (package-initialize)
 
