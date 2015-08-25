@@ -2,8 +2,8 @@
 (global-font-lock-mode 1)
 
 ;; Indentation
-(setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
 
 ;; Replace selected region with typed text
 (delete-selection-mode)
@@ -91,7 +91,8 @@
 (show-smartparens-global-mode +1)
 
 ;; diff-hl
-(global-diff-hl-mode)
+(global-diff-hl-mode +1)
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 
 ;; which-key
 (require 'which-key)
@@ -151,5 +152,9 @@ credit: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginnin
       (move-beginning-of-line 1))))
 
 (global-set-key [remap move-beginning-of-line] 'rekenerd-move-beginning-of-line)
+
+;; Use shift + arrow keys to switch between visible buffers
+(require 'windmove)
+(windmove-default-keybindings)
 
 (provide 'rk-editor)
