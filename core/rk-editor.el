@@ -32,20 +32,13 @@
 (require 'flx-ido)
 (setq flx-ido-threshold 1000)
 
-;; magit
+;;; magit
 (require 'magit)
 (setq magit-last-seen-setup-instructions "2.1.0")
 ;; (setq magit-status-buffer-switch-function 'switch-to-buffer)
 (setq magit-completing-read-function 'magit-ido-completing-read)
 (setq magit-revert-backup t)
 (setenv "EDITOR" "emacsclient")
-
-;; Enable magit-gitflow
-(require 'magit-gitflow)
-(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
-(with-eval-after-load 'magit-gitflow
-    (define-key magit-gitflow-mode-map (kbd "C-f") nil)
-    (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
 ;; Do not verify if pushing current branch to its upstream branch
 (setq magit-push-always-verify 'PP)
@@ -55,7 +48,7 @@
   (remove-hook 'git-commit-finish-query-functions
                #'git-commit-check-style-conventions))
 
-;; start magit in fullscreen, on exit (from magit) restore window configuration
+;; Start magit in fullscreen, on exit (from magit) restore window configuration
 (eval-after-load "magit"
   '(defadvice magit-status (around magit-fullscreen activate)
      (window-configuration-to-register :magit-fullscreen)
@@ -70,6 +63,13 @@
 
 (eval-after-load "magit"
   '(progn (define-key magit-status-mode-map (kbd "q") 'magit-quit-session)))
+
+;; Enable magit-gitflow
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
+(with-eval-after-load 'magit-gitflow
+    (define-key magit-gitflow-mode-map (kbd "C-f") nil)
+    (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
 ;; smex
 (require 'smex)
@@ -131,13 +131,14 @@
 
 (defun rekenerd-move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.
-Move point to the first non-whitespace character on this line.
-If point is already there, move to the beginning of the line.
-Effectively toggle between the first non-whitespace character and
-the beginning of the line.
-If ARG is not nil or 1, move forward ARG - 1 lines first.  If
-point reaches the beginning or end of the buffer, stop there.
-credit: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/"
+   Move point to the first non-whitespace character on this line.
+   If point is already there, move to the beginning of the line.
+   Effectively toggle between the first non-whitespace character and
+   the beginning of the line.
+   If ARG is not nil or 1, move forward ARG - 1 lines first.
+   If point reaches the beginning or end of the buffer, stop there.
+
+   credit: http://emacsredux.com/blog/2013/05/22/smarter-navigation-to-the-beginning-of-a-line/"
   (interactive "^p")
   (setq arg (or arg 1))
 
