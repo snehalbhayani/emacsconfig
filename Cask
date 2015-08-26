@@ -8,7 +8,6 @@
 (depends-on "browse-kill-ring")
 (depends-on "cask")
 (depends-on "company")
-(depends-on "company-jedi")
 (depends-on "concurrent")
 (depends-on "ctable")
 (depends-on "dash")

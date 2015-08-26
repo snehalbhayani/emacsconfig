@@ -1,14 +1,14 @@
 ;; Enable company mode
 (require 'company)
-(setq company-idle-delay 0.5)
-(setq company-tooltip-limit 10)
-(setq company-minimum-prefix-length 2)
-(setq company-tooltip-flip-when-above t)
-(global-company-mode t)
+(setq company-idle-delay 0.5
+      company-tooltip-limit 10
+      company-minimum-prefix-length 2
+      company-tooltip-flip-when-above t)
 
-;; Don't downcase completions by company mode
-(add-hook 'company-mode-hook '(lambda ()
-                                (setq company-dabbrev-downcase nil)
-                                (setq company-dabbrev-ignore-case nil)))
+(setq company-global-modes '(not erlang-mode python-mode))
 
-(add-hook 'after-init-hook 'global-company-mode)
+(setq rekenerd-default-company-backends '(company-capf company-dabbrev company-files))
+(setq-default company-backends rekenerd-default-company-backends)
+
+(make-variable-buffer-local 'company-backends)
+(global-company-mode)
