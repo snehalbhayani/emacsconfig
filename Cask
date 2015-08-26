@@ -30,6 +30,7 @@
 (depends-on "ido-completing-read+")
 (depends-on "jedi")
 (depends-on "jedi-core")
+(depends-on "jinja2-mode")
 (depends-on "js2-mode")
 (depends-on "json-mode")
 (depends-on "json-reformat")
