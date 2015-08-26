@@ -2,6 +2,7 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "ansible-doc")
 (depends-on "async")
 (depends-on "auto-complete")
 (depends-on "browse-kill-ring")
@@ -56,6 +57,7 @@
 (depends-on "switch-window")
 (depends-on "tablist")
 (depends-on "web-mode")
+(depends-on "wgrep")
 (depends-on "which-key")
 (depends-on "with-editor")
 (depends-on "yaml-mode")
