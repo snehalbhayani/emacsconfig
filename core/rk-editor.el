@@ -12,6 +12,12 @@
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
 
+;; auto-complete
+(setq ac-auto-start 3
+      ac-auto-show-menu 0.5
+      ac-use-fuzzy t
+      ac-use-menu-map t)
+
 ;; projectile
 (require 'projectile)
 (projectile-global-mode)
