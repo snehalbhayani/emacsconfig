@@ -38,7 +38,6 @@
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "magit-popup")
-(depends-on "monokai-theme")
 (depends-on "multiple-cursors")
 (depends-on "package-build")
 (depends-on "pallet")
