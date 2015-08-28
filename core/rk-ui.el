@@ -1,7 +1,7 @@
 ;;; Theme
-(setq spacemacs-theme-comment-bg nil)
-(load-theme 'spacemacs-light t)
-;; (load-theme 'atom-dark t)
+;; (setq spacemacs-theme-comment-bg nil)
+;; (load-theme 'spacemacs-dark t)
+(load-theme 'monokai t)
 
 ;; Mode line theme
 (powerline-default-theme)
