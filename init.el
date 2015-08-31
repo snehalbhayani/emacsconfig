@@ -21,7 +21,7 @@
 (setq load-prefer-newer t)
 
 ;; Fix load path
-(when (memq window-system '(mac ns))
+(when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
 
 ;; Increase the frequency of garbage collection
