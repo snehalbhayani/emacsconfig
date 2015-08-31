@@ -28,7 +28,7 @@
 (setq gc-cons-threshold (* 100 1024 1024))
 
 ;; Warn when opening files bigger than 100MB
-(setq large-file-warning-threshold 100000000)
+(setq large-file-warning-threshold (* 100 1024 1024))
 
 ;; Set path
 (defvar root-dir (file-name-directory load-file-name))
