@@ -174,4 +174,25 @@
 ;; Do not show empty groups in ibuffer
 (setq ibuffer-show-empty-filter-groups nil)
 
+(defun rekenerd-comment-line-or-region (n)
+  "Comment or uncomment current line and leave point after it.
+   With positive prefix, apply to N lines including current one.
+   With negative prefix, apply to -N lines above.
+   If region is active, apply to active region instead.
+   credit: http://endlessparentheses.com/implementing-comment-line.html"
+  (interactive "p")
+  (if (use-region-p)
+      (comment-or-uncomment-region
+       (region-beginning) (region-end))
+    (let ((range
+           (list (line-beginning-position)
+                 (goto-char (line-end-position n)))))
+      (comment-or-uncomment-region
+       (apply #'min range)
+       (apply #'max range)))
+    ;; (forward-line 1)
+    (back-to-indentation)))
+
+(global-set-key (kbd "C-;") #'rekenerd-comment-line-or-region)
+
 (provide 'rk-editor)
