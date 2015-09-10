@@ -1,4 +1,5 @@
 (require 'py-autopep8)
+(setq py-autopep8-options '("--max-line-length=149"))
 (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
 
 (require 'jedi)
@@ -7,5 +8,3 @@
 (setq jedi:tooltip-method nil)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
 (add-hook 'python-mode-hook 'jedi:setup)
-
-(setq python-indent 4)
