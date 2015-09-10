@@ -11,3 +11,8 @@ M-x jedi:install-server
 
 ### Update git
 Update to v1.9.4 or above
+
+### Install autopep8
+```bash
+$ pip install autopep8
+```

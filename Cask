@@ -47,6 +47,7 @@
 (depends-on "popup")
 (depends-on "powerline")
 (depends-on "projectile")
+(depends-on "py-autopep8")
 (depends-on "python-environment")
 (depends-on "python-mode")
 (depends-on "s")
