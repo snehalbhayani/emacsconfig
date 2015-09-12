@@ -1,13 +1,14 @@
 ;;; Theme
-(setq spacemacs-theme-comment-bg nil)
-(load-theme 'spacemacs-light t)
-;; (load-theme 'monokai t)
+;; (setq spacemacs-theme-comment-bg nil)
+;; (load-theme 'spacemacs-light t)
+(load-theme 'noctilux t)
 
 ;; Mode line theme
 (powerline-default-theme)
 
 ;; Font
 (set-frame-font "Source Code Pro 13")
+;; (set-frame-font "Inconsolata 14")
 
 ;; Disable startup screen
 (setq inhibit-startup-screen t)

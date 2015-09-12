@@ -40,6 +40,7 @@
 (depends-on "magit-popup")
 (depends-on "monokai-theme")
 (depends-on "multiple-cursors")
+(depends-on "noctilux-theme")
 (depends-on "package-build")
 (depends-on "pallet")
 (depends-on "pdf-tools")
