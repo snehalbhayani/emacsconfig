@@ -1,4 +1,4 @@
-(defun rekenerd-font-lock-comment-annotations ()
+(defun rk/font-lock-comment-annotations ()
   "credit: https://github.com/bbatsov
    Highlight a bunch of well known comment annotations.
    This functions should be added to the hooks of major modes for programming."
@@ -6,7 +6,7 @@
    nil '(("\\<\\(\\(FIX\\(ME\\)?\\|TODO\\|OPTIMIZE\\|HACK\\|REFACTOR\\):\\)"
           1 font-lock-warning-face t))))
 
-(defun rekenerd-prog-mode-defaults ()
-  (rekenerd-font-lock-comment-annotations))
+(defun rk/prog-mode-defaults ()
+  (rk/font-lock-comment-annotations))
 
-(add-hook 'prog-mode-hook 'rekenerd-prog-mode-defaults)
+(add-hook 'prog-mode-hook 'rk/prog-mode-defaults)

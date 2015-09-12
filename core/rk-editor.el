@@ -134,7 +134,7 @@
 (setq browse-kill-ring-no-duplicates t)
 (setq browse-kill-ring-recenter t)
 
-(defun rekenerd-move-beginning-of-line (arg)
+(defun rk/move-beginning-of-line (arg)
   "Move point back to indentation of beginning of line.
    Move point to the first non-whitespace character on this line.
    If point is already there, move to the beginning of the line.
@@ -157,7 +157,7 @@
     (when (= orig-point (point))
       (move-beginning-of-line 1))))
 
-(global-set-key [remap move-beginning-of-line] 'rekenerd-move-beginning-of-line)
+(global-set-key [remap move-beginning-of-line] 'rk/move-beginning-of-line)
 
 ;; Use shift + arrow keys to switch between visible buffers
 (require 'windmove)
@@ -174,7 +174,7 @@
 ;; Do not show empty groups in ibuffer
 (setq ibuffer-show-empty-filter-groups nil)
 
-(defun rekenerd-comment-line-or-region (n)
+(defun rk/comment-line-or-region (n)
   "Comment or uncomment current line and leave point after it.
    With positive prefix, apply to N lines including current one.
    With negative prefix, apply to -N lines above.
@@ -193,6 +193,6 @@
     ;; (forward-line 1)
     (back-to-indentation)))
 
-(global-set-key (kbd "C-;") #'rekenerd-comment-line-or-region)
+(global-set-key (kbd "C-;") #'rk/comment-line-or-region)
 
 (provide 'rk-editor)

@@ -18,7 +18,7 @@
 ;; Add a custom function for underlining errors
 (require 'flycheck)
 
-(defun rekenerd-add-lines-for-errors (err)
+(defun rk/add-lines-for-errors (err)
   "Credit: https://github.com/iqbalansari"
   (flycheck-error-with-buffer err
     (when (equal (flycheck-error-level err) 'error)
@@ -38,10 +38,10 @@
         overlay))))
 
 (with-eval-after-load 'flycheck
-  (add-to-list 'flycheck-process-error-functions #'rekenerd-add-lines-for-errors))
+  (add-to-list 'flycheck-process-error-functions #'rk/add-lines-for-errors))
 
 ;; Change flycheck face to use straight lines instead of wavy lines
-(defun rekenerd-flycheck-use-straight-lines ()
+(defun rk/flycheck-use-straight-lines ()
   "Credit: https://github.com/iqbalansari"
   (when (display-graphic-p)
     (let ((error-color (plist-get (face-attribute 'flycheck-error :underline) :color))
@@ -51,7 +51,7 @@
       (set-face-attribute 'flycheck-warning nil :underline (list :style 'line :color warning-color))
       (set-face-attribute 'flycheck-info nil :underline (list :style 'line :color info-color)))))
 
-(add-hook 'flycheck-mode-hook #'rekenerd-flycheck-use-straight-lines)
+(add-hook 'flycheck-mode-hook #'rk/flycheck-use-straight-lines)
 
 ;; Enable flycheck-cask
 (with-eval-after-load 'flycheck
