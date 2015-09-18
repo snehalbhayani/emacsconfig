@@ -2,6 +2,7 @@
 (source marmalade)
 (source melpa)
 
+(depends-on "angularjs-mode")
 (depends-on "ansible-doc")
 (depends-on "async")
 (depends-on "auto-complete")
