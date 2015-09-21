@@ -59,6 +59,7 @@
 (depends-on "spacemacs-theme")
 (depends-on "switch-window")
 (depends-on "tablist")
+(depends-on "web-beautify")
 (depends-on "web-mode")
 (depends-on "wgrep")
 (depends-on "which-key")

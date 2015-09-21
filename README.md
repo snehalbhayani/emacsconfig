@@ -16,3 +16,8 @@ Update to v1.9.4 or above
 ```bash
 $ pip install autopep8
 ```
+
+### Install js-beautify
+```bash
+$ npm install -g js-beautify
+```
