@@ -24,7 +24,6 @@
 ;; (setq projectile-enable-caching nil)
 (setq projectile-indexing-method 'alien)
 (setq projectile-use-git-grep t)
-(setq projectile-completion-system 'grizzl)
 
 ;; ;; IDO
 ;; (require 'ido)

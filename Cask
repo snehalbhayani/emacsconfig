@@ -25,7 +25,6 @@
 (depends-on "flycheck-cask")
 (depends-on "git-commit")
 (depends-on "gitignore-mode")
-(depends-on "grizzl")
 (depends-on "guru-mode")
 (depends-on "helm")
 (depends-on "helm-company")
