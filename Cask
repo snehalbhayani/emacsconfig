@@ -53,6 +53,7 @@
 (depends-on "py-autopep8")
 (depends-on "python-environment")
 (depends-on "python-mode")
+(depends-on "rainbow-mode")
 (depends-on "s")
 (depends-on "shut-up")
 (depends-on "smartparens")
