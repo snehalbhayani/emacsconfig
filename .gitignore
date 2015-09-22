@@ -41,6 +41,7 @@ ac-comphist.dat
 projectile.cache
 .python-environments/*
 .mc-lists.el
+recentf
 
 # Gravatar cache
 url/
