@@ -5,6 +5,7 @@
 (depends-on "angularjs-mode")
 (depends-on "ansible-doc")
 (depends-on "async")
+(depends-on "auto-compile")
 (depends-on "auto-complete")
 (depends-on "browse-kill-ring")
 (depends-on "cask")

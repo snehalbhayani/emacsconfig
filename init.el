@@ -20,6 +20,11 @@
 ;; Always load newest byte code
 (setq load-prefer-newer t)
 
+;; Enable auto-compile mode
+(require 'auto-compile)
+(auto-compile-on-load-mode 1)
+(auto-compile-on-save-mode 1)
+
 ;; Fix load path
 (when (memq window-system '(mac ns x))
   (exec-path-from-shell-initialize))
