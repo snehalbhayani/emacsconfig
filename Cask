@@ -20,7 +20,6 @@
 (depends-on "exec-path-from-shell")
 (depends-on "f")
 (depends-on "flx")
-(depends-on "flx-ido")
 (depends-on "flycheck")
 (depends-on "flycheck-cask")
 (depends-on "git-commit")
