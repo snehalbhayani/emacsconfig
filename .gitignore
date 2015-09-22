@@ -42,6 +42,7 @@ projectile.cache
 .python-environments/*
 .mc-lists.el
 recentf
+helm-adaptive-history
 
 # Gravatar cache
 url/

@@ -1,39 +1,64 @@
 (require 'helm-config)
-(require 'helm-projectile)
+(add-hook 'after-init-hook #'helm-mode)
 
-(when (executable-find "curl")
-  (setq helm-google-suggest-use-curl-p t))
+;; Enable helm-adaptive-mode
+(add-hook 'after-init-hook #'helm-adaptive-mode)
 
-(setq helm-split-window-in-side-p           t
+(setq helm-descbinds-window-style 'split-window)
+(helm-descbinds-mode)
+
+(setq helm-mode-fuzzy-match                 t
+      helm-recentf-fuzzy-match              t
       helm-buffers-fuzzy-matching           t
-      helm-move-to-line-cycle-in-source     t
-      helm-ff-search-library-in-sexp        t
-      helm-ff-file-name-history-use-recentf t)
+      helm-locate-fuzzy-match             nil
+      helm-M-x-fuzzy-match                  t
+      helm-semantic-fuzzy-match             t
+      helm-imenu-fuzzy-match                t
+      helm-apropos-fuzzy-match              t
+      helm-lisp-fuzzy-completion            t
+      helm-completion-in-region-fuzzy-match t)
 
+;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+;; credit: http://tuhdo.github.io/helm-intro.html
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
 
-(define-key helm-command-map (kbd "o")     'helm-occur)
 (define-key helm-command-map (kbd "g")     'helm-do-grep)
-(define-key helm-command-map (kbd "C-c w") 'helm-wikipedia-suggest)
 (define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x C-m") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h f") 'helm-apropos)
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
+(global-set-key [remap locate] #'helm-locate)
 (global-set-key (kbd "C-h C-l") 'helm-locate-library)
+(global-set-key (kbd "C-c h o") 'helm-occur)
+(global-set-key [remap imenu] 'helm-imenu)
 
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
 
 (substitute-key-definition 'find-tag 'helm-etags-select global-map)
-(setq projectile-completion-system 'helm)
-(helm-descbinds-mode)
-(helm-mode 1)
 
-;; Enable Helm version of Projectile with replacment commands
-(helm-projectile-on)
+(require 'helm-projectile)
+(with-eval-after-load 'projectile
+  (helm-projectile-on)
+  (setq projectile-switch-project-action 'helm-projectile)
+  (setq projectile-completion-system 'helm)
+  (setq helm-mini-default-sources '(helm-source-buffers-list
+                                    helm-source-projectile-buffers-list
+                                    helm-source-projectile-files-list
+                                    helm-source-buffer-not-found
+                                    helm-source-recentf)))
+
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "C-<return>") 'helm-company))
+
+(require 'helm-eshell)
+(add-hook 'eshell-mode-hook
+          #'(lambda ()
+              (define-key eshell-mode-map (kbd "C-c C-l")  'helm-eshell-history)))
+
+(define-key shell-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
