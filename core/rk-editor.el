@@ -26,17 +26,17 @@
 (setq projectile-use-git-grep t)
 (setq projectile-completion-system 'grizzl)
 
-;; IDO
-(require 'ido)
-(ido-mode 1)
-(ido-everywhere 1)
-(flx-ido-mode 1)
-(setq ido-enable-flex-matching t)
-(setq read-buffer-function #'ido-read-buffer)
+;; ;; IDO
+;; (require 'ido)
+;; (ido-mode 1)
+;; (ido-everywhere 1)
+;; (flx-ido-mode 1)
+;; (setq ido-enable-flex-matching t)
+;; (setq read-buffer-function #'ido-read-buffer)
 
-;; flx-ido
-(require 'flx-ido)
-(setq flx-ido-threshold 1000)
+;; ;; flx-ido
+;; (require 'flx-ido)
+;; (setq flx-ido-threshold 1000)
 
 ;;; magit
 (require 'magit)
