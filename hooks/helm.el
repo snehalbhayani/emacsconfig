@@ -25,8 +25,8 @@
 (global-set-key (kbd "C-c h") 'helm-command-prefix)
 (global-unset-key (kbd "C-x c"))
 
-(define-key helm-command-map (kbd "g")     'helm-do-grep)
-(define-key helm-command-map (kbd "SPC")   'helm-all-mark-rings)
+(define-key helm-command-map (kbd "g") 'helm-do-grep)
+(define-key helm-command-map (kbd "SPC") 'helm-all-mark-rings)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "C-x b") 'helm-mini)
@@ -39,8 +39,6 @@
 (global-set-key [remap imenu] 'helm-imenu)
 
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
-
-(substitute-key-definition 'find-tag 'helm-etags-select global-map)
 
 (require 'helm-projectile)
 (with-eval-after-load 'projectile
