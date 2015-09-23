@@ -28,6 +28,7 @@
 (depends-on "helm")
 (depends-on "helm-company")
 (depends-on "helm-descbinds")
+(depends-on "helm-flycheck")
 (depends-on "helm-projectile")
 (depends-on "ibuffer-projectile")
 (depends-on "ido-completing-read+")
