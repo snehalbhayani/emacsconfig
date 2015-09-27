@@ -8,13 +8,17 @@
 (setq helm-descbinds-window-style 'split-window)
 (helm-descbinds-mode)
 
+(require 'helm-mode)
+(require 'helm-command)
+(require 'helm-semantic)
+(require 'helm-elisp)
+
 (setq helm-mode-fuzzy-match                 t
       helm-recentf-fuzzy-match              t
       helm-buffers-fuzzy-matching           t
       helm-locate-fuzzy-match             nil
       helm-M-x-fuzzy-match                  t
       helm-semantic-fuzzy-match             t
-      helm-imenu-fuzzy-match                t
       helm-apropos-fuzzy-match              t
       helm-lisp-fuzzy-completion            t
       helm-completion-in-region-fuzzy-match t)
@@ -37,7 +41,11 @@
 (global-set-key [remap locate] #'helm-locate)
 (global-set-key (kbd "C-h C-l") 'helm-locate-library)
 (global-set-key (kbd "C-c h o") 'helm-occur)
+
+(require 'helm-imenu)
 (global-set-key [remap imenu] 'helm-imenu)
+(setq helm-imenu-fuzzy-match t)
+(setq helm-imenu-execute-action-at-once-if-one nil)
 
 (define-key minibuffer-local-map (kbd "C-c C-l") 'helm-minibuffer-history)
 
@@ -56,13 +64,17 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "C-<return>") 'helm-company))
 
-(require 'helm-eshell)
-(add-hook 'eshell-mode-hook
-          #'(lambda ()
-              (define-key eshell-mode-map (kbd "C-c C-l") 'helm-eshell-history)))
-
 (define-key shell-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
 
 (require 'helm-flycheck)
 (eval-after-load 'flycheck
   '(define-key flycheck-mode-map (kbd "C-c ! h") 'helm-flycheck))
+
+;;; helm-grep configuration
+;; Use C-c C-c to save grep results
+(defun rk/helm-grep-save-results ()
+  (interactive)
+  (helm-exit-and-execute-action 'helm-grep-save-results))
+
+(with-eval-after-load 'helm-grep
+  (define-key helm-grep-map (kbd "C-c C-c") #'rk/helm-grep-save-results))
