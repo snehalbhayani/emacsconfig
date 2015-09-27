@@ -56,6 +56,7 @@
 (depends-on "python-environment")
 (depends-on "python-mode")
 (depends-on "rainbow-mode")
+(depends-on "restart-emacs" :git "https://github.com/iqbalansari/restart-emacs.git" :files ("*" (:exclude ".git")))
 (depends-on "s")
 (depends-on "shut-up")
 (depends-on "smartparens")
