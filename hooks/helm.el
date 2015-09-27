@@ -4,6 +4,7 @@
 ;; Enable helm-adaptive-mode
 (add-hook 'after-init-hook #'helm-adaptive-mode)
 
+(require 'helm-descbinds)
 (setq helm-descbinds-window-style 'split-window)
 (helm-descbinds-mode)
 
@@ -51,6 +52,7 @@
                                     helm-source-buffer-not-found
                                     helm-source-recentf)))
 
+(require 'helm-company)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "C-<return>") 'helm-company))
 

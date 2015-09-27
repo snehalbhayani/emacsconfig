@@ -7,7 +7,7 @@
 
 (setq company-global-modes '(not erlang-mode python-mode))
 
-(setq rk/default-company-backends '(company-capf company-dabbrev company-files))
+(defvar rk/default-company-backends '(company-capf company-dabbrev company-files))
 (setq-default company-backends rk/default-company-backends)
 
 (make-variable-buffer-local 'company-backends)

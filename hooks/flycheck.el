@@ -1,3 +1,4 @@
+(require 'flycheck)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; Check syntax automatically after a second of inactivity
@@ -16,8 +17,6 @@
 (setq flycheck-highlighting-mode nil)
 
 ;; Add a custom function for underlining errors
-(require 'flycheck)
-
 (defun rk/add-lines-for-errors (err)
   "Credit: https://github.com/iqbalansari"
   (flycheck-error-with-buffer err
