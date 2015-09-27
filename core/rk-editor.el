@@ -9,10 +9,11 @@
 (delete-selection-mode)
 
 ;; Save buffer at end of session
+(require 'desktop)
 (setq desktop-restore-frames nil)
 (desktop-save-mode 1)
 
-;; auto-complete
+(require 'auto-complete)
 (setq ac-auto-start 3
       ac-auto-show-menu 0.5
       ac-use-fuzzy t
@@ -34,8 +35,8 @@
 
 ;;; magit
 (require 'magit)
-(setq magit-restore-window-configuration t
-      magit-revert-buffers 'silent
+;; (setq magit-restore-window-configuration t)
+(setq magit-revert-buffers 'silent
       magit-push-always-verify nil
       magit-delete-by-moving-to-trash nil
       magit-diff-auto-show-delay 0.1
@@ -108,6 +109,7 @@
 (setq x-select-enable-clipboard t)
 
 ;; Auto refresh buffers
+(require 'autorevert)
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
@@ -125,7 +127,6 @@
 (setq browse-kill-ring-display-duplicates nil)
 (setq browse-kill-ring-highlight-inserted-item nil)
 (setq browse-kill-ring-maximum-display-length 100)
-(setq browse-kill-ring-no-duplicates t)
 (setq browse-kill-ring-recenter t)
 
 (defun rk/move-beginning-of-line (arg)
