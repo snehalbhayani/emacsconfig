@@ -14,6 +14,7 @@
 (package-initialize)
 
 ;; Enable async byte compilation for all packages
+(require 'async-bytecomp)
 (setq async-bytecomp-allowed-packages '(all))
 (async-bytecomp-package-mode)
 

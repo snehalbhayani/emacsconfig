@@ -1,3 +1,4 @@
+(require 'doc-view)
 (setq doc-view-continuous t)
 
 (defun rk/install-pdf-tools ()
