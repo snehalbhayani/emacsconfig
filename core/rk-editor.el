@@ -41,8 +41,9 @@
       magit-delete-by-moving-to-trash nil
       magit-diff-auto-show-delay 0.1
       magit-log-section-arguments nil
-      magit-log-show-margin nil
-      magit-completing-read-function 'magit-ido-completing-read)
+      magit-log-show-margin nil)
+
+;; (setq magit-completing-read-function 'magit-ido-completing-read)
 
 ;; Do not check for commit conventions in magit commit buffer
 (with-eval-after-load 'magit

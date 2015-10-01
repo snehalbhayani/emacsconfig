@@ -32,7 +32,6 @@
 (depends-on "helm-flycheck")
 (depends-on "helm-projectile")
 (depends-on "ibuffer-projectile")
-(depends-on "ido-completing-read+")
 (depends-on "jedi")
 (depends-on "jedi-core")
 (depends-on "jinja2-mode")
