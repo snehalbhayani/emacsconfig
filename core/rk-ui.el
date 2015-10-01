@@ -54,6 +54,7 @@
 (with-eval-after-load 'guru-mode (diminish 'guru-mode))
 (with-eval-after-load 'helm-mode (diminish 'helm-mode))
 (with-eval-after-load 'smartparens (diminish 'smartparens-mode))
+(with-eval-after-load 'tern (diminish 'tern-mode))
 (with-eval-after-load 'which-key (diminish 'which-key-mode))
 
 (provide 'rk-ui)
