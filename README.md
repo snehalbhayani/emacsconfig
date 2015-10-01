@@ -17,7 +17,7 @@ Update to v1.9.4 or above
 $ pip install autopep8
 ```
 
-### Install js-beautify
+### Install javascript dependencies
 ```bash
-$ npm install -g js-beautify
+$ npm install -g js-beautify tern
 ```
