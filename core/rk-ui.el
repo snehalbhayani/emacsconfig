@@ -49,6 +49,7 @@
 ;; Diminsh some minor modes
 (require 'diminish)
 (diminish 'visual-line-mode)
+(with-eval-after-load 'auto-complete (diminish 'auto-complete-mode))
 (with-eval-after-load 'company (diminish 'company-mode))
 (with-eval-after-load 'eldoc (diminish 'eldoc-mode))
 (with-eval-after-load 'guru-mode (diminish 'guru-mode))
