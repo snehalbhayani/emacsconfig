@@ -5,6 +5,9 @@
       company-minimum-prefix-length 2
       company-tooltip-flip-when-above t)
 
+(require 'company-dabbrev)
+(setq company-dabbrev-downcase nil)
+
 (setq company-global-modes '(not erlang-mode python-mode))
 
 (defvar rk/default-company-backends '(company-capf company-dabbrev company-files))
