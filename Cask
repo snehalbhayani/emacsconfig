@@ -62,7 +62,6 @@
 (depends-on "s")
 (depends-on "shut-up")
 (depends-on "smartparens")
-(depends-on "smex")
 (depends-on "spacemacs-theme")
 (depends-on "switch-window")
 (depends-on "tablist")

@@ -71,10 +71,6 @@
   (define-key magit-gitflow-mode-map (kbd "C-f") nil)
   (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
-;; smex
-(require 'smex)
-(smex-initialize)
-
 ;; Trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
