@@ -44,7 +44,6 @@
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "magit-popup")
-(depends-on "monokai-theme")
 (depends-on "multiple-cursors")
 (depends-on "noctilux-theme")
 (depends-on "package-build")
@@ -74,4 +73,3 @@
 (depends-on "which-key")
 (depends-on "with-editor")
 (depends-on "yaml-mode")
-(depends-on "zenburn-theme")
