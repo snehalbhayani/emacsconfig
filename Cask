@@ -15,6 +15,7 @@
 (depends-on "dash")
 (depends-on "deferred")
 (depends-on "diff-hl")
+(depends-on "diminish")
 (depends-on "epc")
 (depends-on "epl")
 (depends-on "exec-path-from-shell")

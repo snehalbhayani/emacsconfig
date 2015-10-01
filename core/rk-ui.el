@@ -46,4 +46,14 @@
 ;; Replace yes-no questions with y-n questions
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; Diminsh some minor modes
+(require 'diminish)
+(diminish 'visual-line-mode)
+(with-eval-after-load 'company (diminish 'company-mode))
+(with-eval-after-load 'eldoc (diminish 'eldoc-mode))
+(with-eval-after-load 'guru-mode (diminish 'guru-mode))
+(with-eval-after-load 'helm-mode (diminish 'helm-mode))
+(with-eval-after-load 'smartparens (diminish 'smartparens-mode))
+(with-eval-after-load 'which-key (diminish 'which-key-mode))
+
 (provide 'rk-ui)
