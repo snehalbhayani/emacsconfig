@@ -7,6 +7,7 @@
           1 font-lock-warning-face t))))
 
 (defun rk/prog-mode-defaults ()
+  (eldoc-mode t)
   (rk/font-lock-comment-annotations))
 
 (add-hook 'prog-mode-hook 'rk/prog-mode-defaults)
