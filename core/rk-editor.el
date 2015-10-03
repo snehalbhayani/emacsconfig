@@ -91,12 +91,32 @@
 (global-diff-hl-mode +1)
 (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 
-;; which-key
+;;; which-key configuration
 (require 'which-key)
-(which-key-mode +1)
-(which-key-setup-side-window-bottom)
-;; (setq which-key-idle-delay 0.5)
+(add-hook 'after-init-hook #'which-key-mode)
+(with-eval-after-load 'which-key
+  (which-key-setup-side-window-bottom))
+
 (setq which-key-side-window-max-height 0.5)
+(setq which-key-paging-prefixes '("C-x" "C-c"))
+(setq which-key-paging-key "<f5>")
+
+;; Prettier (unicode) display for special keys
+(with-eval-after-load 'which-key
+  (dolist (replacements '(("TAB" . "↹") ("RET" . "⏎") ("SPC" . "␣") ("DEL" . "⌫") ("ESC" . "⎋")))
+    (when (char-displayable-p (string-to-char (cdr replacements)))
+      (push replacements which-key-key-replacement-alist))))
+
+;; Custom sorting order for keys in which-key
+;; Inspired by https://github.com/justbur/emacs-which-key/issues/44#issuecomment-141950413
+(defun rk/which-key-prefix-first-then-by-keys (acons bcons)
+  (let ((a-group-p (which-key--group-p (cdr acons)))
+        (b-group-p (which-key--group-p (cdr bcons))))
+    (if (eq a-group-p b-group-p)
+        (which-key-key-order acons bcons)
+      a-group-p)))
+
+(setq which-key-sort-order 'rk/which-key-prefix-first-then-by-keys)
 
 ;; Scratch buffer configuration
 (kill-buffer "*scratch*")
