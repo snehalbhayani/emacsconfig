@@ -60,6 +60,14 @@
                                     helm-source-buffer-not-found
                                     helm-source-recentf)))
 
+(with-eval-after-load 'helm-projectile
+  (defvar rk/helm-source-file-not-found
+    (helm-build-dummy-source
+        "Create file"
+      :action (lambda (cand) (find-file cand))))
+
+  (add-to-list 'helm-projectile-sources-list rk/helm-source-file-not-found t))
+
 (require 'helm-company)
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "C-<return>") 'helm-company))
