@@ -58,4 +58,24 @@
 (with-eval-after-load 'tern (diminish 'tern-mode))
 (with-eval-after-load 'which-key (diminish 'which-key-mode))
 
+;; Make custom linum consistent
+;; credit: http://www.emacswiki.org/emacs/LineNumbers#toc6
+(require 'linum)
+(with-eval-after-load 'linum
+  (defface linum-leading-zero
+    `((t :inherit 'linum
+         :foreground ,(face-attribute 'linum :background nil t)))
+    "Face for displaying leading zeroes for line numbers in display margin."
+    :group 'linum)
+
+  (defun linum-format-func (line)
+    (let ((w (length
+              (number-to-string (count-lines (point-min) (point-max))))))
+      (concat
+       (propertize (make-string (- w (length (number-to-string line))) ?0)
+                   'face 'linum-leading-zero)
+       (propertize (concat " " (number-to-string line) " ") 'face 'linum))))
+
+  (setq linum-format 'linum-format-func))
+
 (provide 'rk-ui)
