@@ -19,7 +19,7 @@
 (global-set-key (kbd "C-S-c") 'mc/mark-all-like-this-dwim)
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "C-S-r") 'set-rectangular-region-anchor)
-(global-set-key (kbd "C-S-a") 'mc/mark-all-in-region)
+(global-set-key (kbd "C-S-a") 'mc/mark-all-in-region-regexp)
 
 ;; Kill current buffer without prompting for buffer name
 (global-set-key (kbd "C-x k") #'kill-this-buffer)
