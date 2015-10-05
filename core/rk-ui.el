@@ -57,6 +57,7 @@
 (with-eval-after-load 'smartparens (diminish 'smartparens-mode))
 (with-eval-after-load 'tern (diminish 'tern-mode))
 (with-eval-after-load 'which-key (diminish 'which-key-mode))
+(with-eval-after-load 'rainbow-mode (diminish 'rainbow-mode))
 
 ;; Make custom linum consistent
 ;; credit: http://www.emacswiki.org/emacs/LineNumbers#toc6
