@@ -19,13 +19,6 @@
       ac-use-fuzzy t
       ac-use-menu-map t)
 
-;; projectile
-(require 'projectile)
-(projectile-global-mode)
-;; (setq projectile-enable-caching nil)
-(setq projectile-indexing-method 'alien)
-(setq projectile-use-git-grep t)
-
 ;; ;; IDO
 ;; (require 'ido)
 ;; (ido-mode 1)
