@@ -40,6 +40,7 @@
 (defvar root-dir (file-name-directory load-file-name))
 (defvar core-dir (expand-file-name "core" root-dir))
 (defvar hooks-dir (expand-file-name "hooks" root-dir))
+(defvar lang-dir (expand-file-name "lang" root-dir))
 
 ;; Load core files
 (add-to-list 'load-path core-dir)
@@ -49,5 +50,5 @@
 (require 'rk-windows)
 (require 'rk-keybindings)
 
-;; Load the hooks
 (mapc 'load (directory-files hooks-dir t "\\.el\\'"))
+(mapc 'load (directory-files lang-dir t "\\.el\\'"))
