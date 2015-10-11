@@ -52,13 +52,13 @@
 (require 'helm-projectile)
 (with-eval-after-load 'projectile
   (helm-projectile-on)
-  (setq projectile-switch-project-action 'helm-projectile)
+  (setq projectile-switch-project-action #'helm-projectile)
   (setq projectile-completion-system 'helm)
   (setq helm-mini-default-sources '(helm-source-buffers-list
                                     helm-source-projectile-buffers-list
                                     helm-source-projectile-files-list
-                                    helm-source-buffer-not-found
-                                    helm-source-recentf)))
+                                    helm-source-recentf
+                                    helm-source-buffer-not-found)))
 
 (with-eval-after-load 'helm-projectile
   (defvar rk/helm-source-file-not-found
