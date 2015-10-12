@@ -34,7 +34,8 @@
 (define-key helm-command-map (kbd "SPC") 'helm-all-mark-rings)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "C-x b") 'helm-mini)
+(global-set-key (kbd "C-x p") 'helm-mini)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-h f") 'helm-apropos)
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
@@ -55,8 +56,10 @@
   (setq projectile-switch-project-action #'helm-projectile)
   (setq projectile-completion-system 'helm)
   (setq helm-mini-default-sources '(helm-source-buffers-list
+                                    helm-source-ido-virtual-buffers
                                     helm-source-projectile-buffers-list
                                     helm-source-projectile-files-list
+                                    helm-source-projectile-projects
                                     helm-source-recentf
                                     helm-source-buffer-not-found)))
 
