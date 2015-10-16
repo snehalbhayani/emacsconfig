@@ -61,7 +61,8 @@
                                     helm-source-projectile-files-list
                                     helm-source-projectile-projects
                                     helm-source-recentf
-                                    helm-source-buffer-not-found)))
+                                    helm-source-buffer-not-found
+                                    helm-source-locate)))
 
 (with-eval-after-load 'helm-projectile
   (defvar rk/helm-source-file-not-found
@@ -73,7 +74,7 @@
 
 (require 'helm-company)
 (with-eval-after-load 'company
-  (define-key company-active-map (kbd "C-<return>") 'helm-company))
+  (define-key company-active-map (kbd "C-\\") 'helm-company))
 
 (define-key shell-mode-map (kbd "C-c C-l") 'helm-comint-input-ring)
 
