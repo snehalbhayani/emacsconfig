@@ -21,9 +21,6 @@
 (global-set-key (kbd "C-S-r") 'set-rectangular-region-anchor)
 (global-set-key (kbd "C-S-a") 'mc/mark-all-in-region-regexp)
 
-;; Kill current buffer without prompting for buffer name
-(global-set-key (kbd "C-x k") #'kill-this-buffer)
-
 (global-set-key (kbd "C-c M-y") 'browse-kill-ring)
 
 (global-set-key (kbd "RET") 'newline-and-indent)

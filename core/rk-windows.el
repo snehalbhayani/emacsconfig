@@ -16,11 +16,19 @@
 (defun rk/kill-other-buffers ()
     "Kill all other buffers"
     (interactive)
-    (when (y-or-n-p "Are you sure you want to kill all buffers but the current one? ")
+    (when (y-or-n-p "Are you sure you want to kill all buffers but the current one?")
       (mapc 'kill-buffer
             (delq (current-buffer)
                   (remove-if-not 'buffer-file-name (buffer-list))))))
 
 (global-set-key (kbd "C-c k") 'rk/kill-other-buffers)
+
+(defun rk/kill-this-buffer ()
+    "Kill this buffer"
+    (interactive)
+    (when (y-or-n-p "Are you sure you want to kill this buffer?")
+      (kill-this-buffer)))
+
+(global-set-key (kbd "C-x k") 'rk/kill-this-buffer)
 
 (provide 'rk-windows)
