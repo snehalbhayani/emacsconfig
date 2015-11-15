@@ -94,6 +94,9 @@
 (setq which-key-paging-prefixes '("C-x" "C-c"))
 (setq which-key-paging-key "<f5>")
 
+;; Keybinding to view toplevel keys
+(global-set-key (kbd "C-h W") #'which-key-show-top-level)
+
 ;; Prettier (unicode) display for special keys
 (with-eval-after-load 'which-key
   (dolist (replacements '(("TAB" . "↹") ("RET" . "⏎") ("SPC" . "␣") ("DEL" . "⌫") ("ESC" . "⎋")))
