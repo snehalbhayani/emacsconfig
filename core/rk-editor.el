@@ -91,7 +91,7 @@
   (which-key-setup-side-window-bottom))
 
 (setq which-key-side-window-max-height 0.5)
-(setq which-key-paging-prefixes '("C-x" "C-c"))
+(setq which-key-paging-prefixes '("C-x" "C-c" "C-h"))
 (setq which-key-paging-key "<f5>")
 
 ;; Keybinding to view toplevel keys
