@@ -90,3 +90,6 @@
 
 (with-eval-after-load 'helm-grep
   (define-key helm-grep-map (kbd "C-c C-c") #'rk/helm-grep-save-results))
+
+;; Helm flx integration
+(helm-flx-mode +1)
