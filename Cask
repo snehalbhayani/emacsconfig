@@ -9,6 +9,7 @@
 (depends-on "browse-kill-ring")
 (depends-on "cask")
 (depends-on "company")
+(depends-on "company-flx")
 (depends-on "company-tern")
 (depends-on "concurrent")
 (depends-on "ctable")

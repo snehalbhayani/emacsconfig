@@ -172,6 +172,7 @@
 (windmove-default-keybindings)
 
 ;; Use ibuffer-projectile to group buffers by projects
+(require 'ibuffer-projectile)
 (defun ibuffer-projectile-setup ()
   (ibuffer-projectile-set-filter-groups)
   (unless (eq ibuffer-sorting-mode 'alphabetic)
@@ -202,5 +203,9 @@
     (back-to-indentation)))
 
 (global-set-key (kbd "C-;") #'rk/comment-line-or-region)
+
+;; flx matching in company
+(with-eval-after-load 'company
+  (company-flx-mode +1))
 
 (provide 'rk-editor)
