@@ -32,6 +32,7 @@
 (depends-on "helm-descbinds")
 (depends-on "helm-flx")
 (depends-on "helm-flycheck")
+(depends-on "helm-fuzzier")
 (depends-on "helm-projectile")
 (depends-on "ibuffer-projectile")
 (depends-on "jedi")
