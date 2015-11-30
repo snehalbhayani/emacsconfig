@@ -40,7 +40,6 @@ smex-items
 ac-comphist.dat
 projectile.cache
 .python-environments/*
-.mc-lists.el
 recentf
 helm-adaptive-history
 
