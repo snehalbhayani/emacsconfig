@@ -51,6 +51,7 @@
 (depends-on "magit")
 (depends-on "magit-gitflow")
 (depends-on "magit-popup")
+(depends-on "multi-line")
 (depends-on "multiple-cursors")
 (depends-on "noctilux-theme")
 (depends-on "package-build")

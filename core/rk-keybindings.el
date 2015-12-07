@@ -25,4 +25,6 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
+(global-set-key (kbd "C-c d") 'multi-line)
+
 (provide 'rk-keybindings)
