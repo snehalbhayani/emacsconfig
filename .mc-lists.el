@@ -3,6 +3,7 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        backward-kill-sentence
         forward-sexp
         magit-status
         mark-whole-buffer
