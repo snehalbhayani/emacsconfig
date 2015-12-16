@@ -94,3 +94,16 @@
 ;; Helm flx integration
 (helm-flx-mode +1)
 (helm-fuzzier-mode +1)
+
+;; Replace rgrep helm equivalents
+(defun helm-do-grep ()
+  "Copied from older helm (https://github.com/emacs-helm/helm/blob/4d4b9d63c5fbe33fe472cf75ac83167d8d82c8e5/helm-grep.el)
+   The latest versions do not come with it."
+  (interactive)
+  (let* ((only (helm-read-file-name
+                "Search in file(s): "
+                :marked-candidates t))
+         (prefarg (or current-prefix-arg helm-current-prefix-arg)))
+    (helm-do-grep-1 only prefarg)))
+
+(global-set-key [remap rgrep] #'helm-do-grep)
