@@ -27,4 +27,6 @@
 
 (global-set-key (kbd "C-c d") 'multi-line)
 
+(global-set-key (kbd "C-x w") 'elfeed)
+
 (provide 'rk-keybindings)

@@ -1,0 +1,10 @@
+(require 'elfeed)
+(setq elfeed-feeds
+      '(("http://oremacs.com/atom.xml" emacs)
+        ("http://endlessparentheses.com/atom.xml" emacs)
+        ("http://pragmaticemacs.com/feed/" emacs)
+        ("https://www.reddit.com/r/emacs/.rss" emacs)
+        ("http://sachachua.com/blog/category/emacs/feed/" emacs sachachua)
+        ("http://planet.emacsen.org/atom.xml" emacs)
+        ("http://ergoemacs.org/emacs/blog.xml" emacs)
+        ))
