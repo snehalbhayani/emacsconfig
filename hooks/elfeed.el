@@ -1,4 +1,5 @@
 (require 'elfeed)
+(setq-default elfeed-search-filter "@1-week-ago +unread ")
 (setq elfeed-feeds '(("http://oremacs.com/atom.xml" emacs)
                      ("http://endlessparentheses.com/atom.xml" emacs)
                      ("http://pragmaticemacs.com/feed/" emacs)
