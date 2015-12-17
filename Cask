@@ -19,6 +19,7 @@
 (depends-on "diff-hl")
 (depends-on "diminish")
 (depends-on "elfeed")
+(depends-on "elfeed-goodies")
 (depends-on "emojify")
 (depends-on "epc")
 (depends-on "epl")
