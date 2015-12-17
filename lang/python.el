@@ -11,5 +11,5 @@
 (setq jedi:complete-on-dot t)
 (setq jedi:tooltip-method nil)
 
-;; Disble eldoc
+;; Disable eldoc for python mode
 (add-hook 'python-mode-hook (lambda () (eldoc-mode -1)))
