@@ -7,3 +7,8 @@
 
 ;; Elfeed goodies configuration
 (with-eval-after-load 'elfeed (elfeed-goodies/setup))
+
+;; Use wider columns in elfeed search
+(require 'elfeed-goodies)
+(setq elfeed-goodies/feed-source-column-width 24)
+(setq elfeed-goodies/tag-column-width 30)
