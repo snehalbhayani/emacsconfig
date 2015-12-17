@@ -7,4 +7,5 @@
         ("http://sachachua.com/blog/category/emacs/feed/" emacs sachachua)
         ("http://planet.emacsen.org/atom.xml" emacs)
         ("http://ergoemacs.org/emacs/blog.xml" emacs)
+        ("http://9gagrss.com/feed/" 9gag)
         ))
