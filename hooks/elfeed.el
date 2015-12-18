@@ -8,7 +8,6 @@
 ;; Elfeed goodies configuration
 (with-eval-after-load 'elfeed (elfeed-goodies/setup))
 
-;; Use wider columns in elfeed search
 (require 'elfeed-goodies)
 (setq elfeed-search-filter "+unread"
       elfeed-goodies/wide-threshold 0.25
