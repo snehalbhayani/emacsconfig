@@ -73,6 +73,7 @@
 (depends-on "rainbow-mode")
 (depends-on "restart-emacs")
 (depends-on "s")
+(depends-on "scala-mode2")
 (depends-on "seq")
 (depends-on "shut-up")
 (depends-on "smartparens")
