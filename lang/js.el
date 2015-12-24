@@ -18,6 +18,9 @@
   (define-key tern-mode-keymap "." nil)
   (add-to-list 'company-backends 'company-tern))
 
+;; Do not create port files
+(setq tern-command '("tern" "--no-port-file"))
+
 (add-hook 'js2-mode-hook #'rk/enable-tern)
 
 ;; (eval-after-load 'js2-mode
