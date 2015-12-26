@@ -1,6 +1,4 @@
-(add-hook 'after-init-hook
-          #'(lambda ()
-              (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))))
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 
 (require 'py-autopep8)
 (setq py-autopep8-options '("--max-line-length=149"))

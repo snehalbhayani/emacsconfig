@@ -71,6 +71,8 @@
 (depends-on "py-autopep8")
 (depends-on "python-environment")
 (depends-on "python-mode")
+(depends-on "python-pep8")
+(depends-on "python-pylint")
 (depends-on "rainbow-mode")
 (depends-on "restart-emacs")
 (depends-on "s")
