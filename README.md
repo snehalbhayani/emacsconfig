@@ -10,14 +10,14 @@ M-x jedi:install-server
 ```
 
 ### Update git
-Update to v1.9.4 or above
+Update git to v1.9.4 or above
 
-### Install autopep8
+### Install pip packages
 ```bash
-$ pip install autopep8
+$ pip3 install autopep8 flake8
 ```
 
-### Install javascript dependencies
+### Install npm packages
 ```bash
 $ npm install -g js-beautify tern
 ```
