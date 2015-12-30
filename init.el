@@ -40,10 +40,11 @@
 (setq large-file-warning-threshold (* 100 1024 1024))
 
 ;; Set path
-(defvar root-dir (file-name-directory load-file-name))
-(defvar core-dir (expand-file-name "core" root-dir))
-(defvar hooks-dir (expand-file-name "hooks" root-dir))
-(defvar lang-dir (expand-file-name "lang" root-dir))
+;; (defvar root-dir (file-name-directory load-file-name))
+(defvar root-dir "~/.emacs.d")
+(defvar core-dir (concat root-dir "/core"))
+(defvar hooks-dir (concat root-dir "/hooks"))
+(defvar lang-dir (concat root-dir "/lang"))
 
 ;; Load core files
 (add-to-list 'load-path core-dir)

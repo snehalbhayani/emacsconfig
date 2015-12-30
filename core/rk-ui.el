@@ -8,8 +8,11 @@
 (powerline-default-theme)
 
 ;; Font
-(set-frame-font "Source Code Pro 13")
-;; (set-frame-font "Inconsolata 14")
+;; (set-frame-font "Source Code Pro 13")
+(set-face-attribute 'default nil
+                    :font "Source Code Pro Medium"
+                    :height 130
+                    :weight 'normal)
 
 ;; Disable startup screen
 (setq inhibit-startup-screen t)
