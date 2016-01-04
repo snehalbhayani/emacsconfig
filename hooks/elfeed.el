@@ -8,4 +8,5 @@
       elfeed-goodies/entry-pane-size 0.85
       elfeed-goodies/show-mode-padding 0
       elfeed-goodies/feed-source-column-width 24
-      elfeed-goodies/tag-column-width 30)
+      elfeed-goodies/tag-column-width 30
+      elfeed-goodies/html-decode-title-tags '(:all))
