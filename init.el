@@ -45,6 +45,7 @@
 (defvar core-dir (concat root-dir "/core"))
 (defvar hooks-dir (concat root-dir "/hooks"))
 (defvar lang-dir (concat root-dir "/lang"))
+(defvar custom-dir (concat root-dir "/custom"))
 
 ;; Load core files
 (add-to-list 'load-path core-dir)
@@ -56,3 +57,4 @@
 
 (mapc 'load (directory-files hooks-dir t "\\.el\\'"))
 (mapc 'load (directory-files lang-dir t "\\.el\\'"))
+(mapc 'load (directory-files custom-dir t "\\.el\\'"))
