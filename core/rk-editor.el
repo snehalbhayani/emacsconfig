@@ -56,6 +56,7 @@
   (jump-to-register :magit-fullscreen))
 
 (with-eval-after-load 'magit
+  (add-hook 'after-init-hook #'global-emojify-mode)
   (define-key magit-status-mode-map (kbd "q") 'magit-quit-session))
 
 ;; Enable magit-gitflow
