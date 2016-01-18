@@ -29,10 +29,7 @@
 ;;; magit
 (require 'magit)
 ;; (setq magit-restore-window-configuration t)
-(setq magit-revert-buffers 'silent
-      magit-push-always-verify nil
-      magit-delete-by-moving-to-trash nil
-      magit-diff-auto-show-delay 0.1
+(setq magit-delete-by-moving-to-trash nil
       magit-log-section-arguments nil
       magit-log-show-margin nil)
 
