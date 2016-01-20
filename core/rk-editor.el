@@ -52,8 +52,10 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
+;; Enable emojify only for magit
+(add-hook 'magit-log-mode-hook 'emojify-mode)
+
 (with-eval-after-load 'magit
-  (add-hook 'after-init-hook #'global-emojify-mode)
   (define-key magit-status-mode-map (kbd "q") 'magit-quit-session))
 
 ;; Enable magit-gitflow
