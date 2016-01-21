@@ -63,7 +63,7 @@
   (define-key magit-gitflow-mode-map (kbd "C-f") nil)
   (define-key magit-gitflow-mode-map (kbd "C-c f") 'magit-gitflow-popup))
 
-;; Trailing whitespace
+;; Delete trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Set guru mode

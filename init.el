@@ -34,7 +34,7 @@
   (exec-path-from-shell-initialize))
 
 ;; Increase the frequency of garbage collection
-(setq gc-cons-threshold (* 100 1024 1024))
+(setq gc-cons-threshold (* 128 1024 1024))
 
 ;; Warn when opening files bigger than 100MB
 (setq large-file-warning-threshold (* 100 1024 1024))
