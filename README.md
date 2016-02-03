@@ -5,6 +5,9 @@ $ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 ```
 
 ### Install Jedi EPC Server
+```bash
+$ pip3 install jedi epc
+```
 ```emacs
 M-x jedi:install-server
 ```
