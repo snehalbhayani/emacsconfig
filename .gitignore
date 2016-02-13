@@ -46,3 +46,4 @@ helm-adaptive-history
 # Gravatar cache
 url/
 custom/
+/request/curl-cookie-jar

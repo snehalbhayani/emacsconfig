@@ -39,6 +39,7 @@
 (depends-on "helm-flx")
 (depends-on "helm-flycheck")
 (depends-on "helm-fuzzier")
+(depends-on "helm-gitignore")
 (depends-on "helm-projectile")
 (depends-on "ht")
 (depends-on "ibuffer-projectile")

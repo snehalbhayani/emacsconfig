@@ -126,7 +126,6 @@
 (global-auto-revert-mode 1)
 (setq global-auto-revert-non-file-buffers t)
 (setq auto-revert-verbose nil)
-(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
 
 ;; UTF-8 encoding
 (setq locale-coding-system 'utf-8)
@@ -170,6 +169,9 @@
 ;; Use shift + arrow keys to switch between visible buffers
 (require 'windmove)
 (windmove-default-keybindings)
+
+;; Enable ibuffer
+(add-hook 'ibuffer-mode-hook (lambda () (ibuffer-auto-mode 1)))
 
 ;; Use ibuffer-projectile to group buffers by projects
 (require 'ibuffer-projectile)
