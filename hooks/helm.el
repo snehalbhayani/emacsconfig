@@ -93,7 +93,7 @@
 
 ;; Helm flx integration
 (helm-flx-mode +1)
-(helm-fuzzier-mode +1)
+;; (helm-fuzzier-mode +1)
 
 ;; Replace rgrep helm equivalents
 (defun helm-do-grep ()
