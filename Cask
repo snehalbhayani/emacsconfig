@@ -3,6 +3,7 @@
 (source melpa)
 
 (depends-on "ace-jump-mode")
+(depends-on "aggressive-indent")
 (depends-on "ansible-doc")
 (depends-on "async")
 (depends-on "auto-compile")
@@ -75,6 +76,7 @@
 (depends-on "python-pep8")
 (depends-on "python-pylint")
 (depends-on "rainbow-mode")
+(depends-on "request")
 (depends-on "restart-emacs")
 (depends-on "s")
 (depends-on "scala-mode2")

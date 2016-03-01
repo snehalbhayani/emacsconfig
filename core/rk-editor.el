@@ -210,4 +210,9 @@
 (with-eval-after-load 'company
   (company-flx-mode +1))
 
+;; Aggressive indent
+(require 'aggressive-indent)
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'web-mode)
+
 (provide 'rk-editor)
