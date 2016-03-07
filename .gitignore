@@ -47,3 +47,6 @@ helm-adaptive-history
 url/
 custom/
 /request/curl-cookie-jar
+
+# Emojify
+emojis/
