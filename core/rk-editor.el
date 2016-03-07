@@ -52,6 +52,12 @@
   (kill-buffer)
   (jump-to-register :magit-fullscreen))
 
+;; Set the emoji set to use
+(require 'emojify)
+(when (and (fboundp 'imagemagick-types)
+           (memq 'PNG (imagemagick-types)))
+  (setq emojify-emoji-set "emojione-v2"))
+
 ;; Enable emojify only for magit
 (add-hook 'magit-log-mode-hook 'emojify-mode)
 
