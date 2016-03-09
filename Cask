@@ -3,7 +3,6 @@
 (source melpa)
 
 (depends-on "ace-jump-mode")
-(depends-on "aggressive-indent")
 (depends-on "ansible-doc")
 (depends-on "async")
 (depends-on "auto-compile")
