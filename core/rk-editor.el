@@ -216,4 +216,7 @@
 (with-eval-after-load 'company
   (company-flx-mode +1))
 
+;; Enable ws-butler
+(add-hook 'after-init-hook 'ws-butler-global-mode)
+
 (provide 'rk-editor)

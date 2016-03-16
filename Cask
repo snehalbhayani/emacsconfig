@@ -93,5 +93,6 @@
 (depends-on "wgrep-helm")
 (depends-on "which-key")
 (depends-on "with-editor")
+(depends-on "ws-butler")
 (depends-on "yaml-mode")
 (depends-on "yasnippet")
