@@ -50,3 +50,9 @@ custom/
 
 # Emojify
 emojis/
+
+# Compiled
+*.elc
+
+# Packaging
+.cask
