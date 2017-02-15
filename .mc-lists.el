@@ -15,6 +15,7 @@
 (setq mc/cmds-to-run-once
       '(
         beginning-of-buffer
+        exit-recursive-edit
         ido-switch-buffer
         indent-for-tab-command
         previous-buffer

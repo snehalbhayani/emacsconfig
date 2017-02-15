@@ -75,7 +75,7 @@
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; Set guru mode
-(guru-global-mode +1)
+(guru-global-mode -1)
 
 ;; Set smartparens mode
 (require 'smartparens)

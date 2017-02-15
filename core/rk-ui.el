@@ -10,7 +10,7 @@
 ;; Font
 ;; (set-frame-font "Source Code Pro 13")
 (set-face-attribute 'default nil
-                    :font "Source Code Pro Medium"
+                    :font "Courier"
                     :height 130
                     :weight 'normal)
 
@@ -58,7 +58,7 @@
 (with-eval-after-load 'eldoc (diminish 'eldoc-mode))
 (with-eval-after-load 'guru-mode (diminish 'guru-mode))
 (with-eval-after-load 'helm-mode (diminish 'helm-mode))
-(with-eval-after-load 'smartparens (diminish 'smartparens-mode))
+;; (with-eval-after-load 'smartparens (diminish 'smartparens-mode))
 (with-eval-after-load 'tern (diminish 'tern-mode))
 (with-eval-after-load 'which-key (diminish 'which-key-mode))
 (with-eval-after-load 'rainbow-mode (diminish 'rainbow-mode))

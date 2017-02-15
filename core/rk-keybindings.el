@@ -20,13 +20,29 @@
 (global-set-key (kbd "C-S-<mouse-1>") 'mc/add-cursor-on-click)
 (global-set-key (kbd "C-S-r") 'set-rectangular-region-anchor)
 (global-set-key (kbd "C-S-a") 'mc/mark-all-in-region-regexp)
+(global-set-key (kbd "C-c u t") 'kill-region)
+(global-set-key (kbd "C-c p y") 'kill-ring-save)
+(global-set-key (kbd "C-p") 'yank)
+(global-set-key (kbd "<right>") 'forward-char)
+(global-set-key (kbd "<left>") 'backward-char)
+(global-set-key (kbd "<delete>") 'delete-char)
+(defun snehal/move-to-next-delimiter ()
+  (interactive)
+  (ignore-errors (search-forward-regexp "[^[:alnum:]]")))
+(defun snehal/move-to-prev-delimiter ()
+  (interactive)
+  (ignore-errors (search-backward-regexp "[^[:alnum:]]")))
 
-(global-set-key (kbd "C-c M-y") 'browse-kill-ring)
+(with-eval-after-load 'smartparens
+  (global-set-key (kbd "<C-left>") nil)
+  (global-set-key (kbd "<C-right>") nil))
 
+(define-key smartparens-mode-map (kbd "<C-right>") 'snehal/move-to-next-delimiter)
+(define-key smartparens-mode-map (kbd "<C-left>") 'snehal/move-to-prev-delimiter)
+
+;; (global-set-key (kbd "<tab>") 'exp/goto-prev-buffer)
 (global-set-key (kbd "RET") 'newline-and-indent)
-
 (global-set-key (kbd "C-c d") 'multi-line)
-
 (global-set-key (kbd "C-x w") 'elfeed)
 
 (provide 'rk-keybindings)
